@@ -32,12 +32,12 @@ ms = { "NorBERT_3_small": "ltg/norbert3-small",
       }
 
 # Comma in path will be used to extract config alternative from HF
-ds = {"tsa-bin": "ltg/norec_tsa, binary",
-      "tsa-intensity":"ltg/norec_tsa, intensity" }
+ds = {"tsa-bin": "data/tsa_binary",
+      "tsa-intensity":"data/tsa_intensity" }
 
 local_out_dir = None
 
-WHERE = "hp"
+WHERE = "fox"
 if WHERE == "hp":
     local_out_dir = "~/tsa_testing"
 
@@ -63,8 +63,9 @@ default = {
     "output_dir": local_out_dir,   # Add to this in iteration to avoid overwriting
     "overwrite_cache": True,
     "overwrite_output_dir": True,
-    "do_train": False,
+    "do_train": True,
     "num_train_epochs": 16,
+    # "num_warmup_steps": 50, # Must go to the optimizer
     "do_eval": True,
     "return_entity_level_metrics": False, # True,
     "use_auth_token": False,
@@ -82,9 +83,9 @@ default = {
 
 
 # Iterations: design this according to needs
-for task in ds.keys():
+for task in ["tsa-bin"]: #ds.keys():
     experiments = [] # List of dicts, one dict per experiments: Saves one separate json file each
-    for i, ( b_size, l_rate) in enumerate(itertools.product( [32, 64], [1e-4, 1e-5, 1e-6])):
+    for i, ( b_size, l_rate) in enumerate(itertools.product( [32, 64], [1e-4, 5e-5, 1e-5])):
         for m_name, m_path in ms.items():
             exp = default.copy()
             exp ["per_device_train_batch_size"] = b_size
@@ -100,13 +101,13 @@ for task in ds.keys():
                                 "task":task, "model_shortname": m_name,
                                 "machinery":WHERE,"args_dict":exp, "best_epoch":None})
 
-for i, exp in enumerate(experiments): # Move this with the experiments list definition to make subfolders
-    args_dict = exp["args_dict"] # The args_dict was initially the entire exp
-    print(args_dict["task_name"])
-    save_path = Path(CONFIG_ROOT,WHERE, args_dict["task_name"]+"_"+str(i).zfill(2)+".json")
-    save_path.parent.mkdir( parents=True, exist_ok=True)
-    with open(save_path, "w") as wf:
-        json.dump(exp, wf)
+    for i, exp in enumerate(experiments): # Move this with the experiments list definition to make subfolders
+        args_dict = exp["args_dict"] # The args_dict was initially the entire exp
+        print(args_dict["task_name"])
+        save_path = Path(CONFIG_ROOT,WHERE, args_dict["task_name"]+"_"+str(i).zfill(2)+".json")
+        save_path.parent.mkdir( parents=True, exist_ok=True)
+        with open(save_path, "w") as wf:
+            json.dump(exp, wf)
 
     # Standalone testing
     # save_path = Path(CONFIG_ROOT,"standalone", args_dict["task_name"]+".json")

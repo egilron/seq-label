@@ -13,9 +13,10 @@ set -o errexit  # Recommended for easier debugging
 source /etc/profile
 module purge
 module load PyTorch/1.11.0-foss-2021a-CUDA-11.3.1
-python -m venv ~/venvs/transformers # --clear # Comment out the --clear when you already have a clean install
+python -m venv ~/venvs/transformers  # --clear # Comment out the --clear when you already have a clean install
 source ~/venvs/transformers/bin/activate
-pip install -r requirements_addon.txt --quiet  # Comment out when you already have a clean install
+# pip install -r requirements_addon.txt --quiet  # Comment out when you already have a clean install
+# pip install accelerate -U
 export TRANSFORMERS_CACHE=/cluster/work/projects/ec30/IN5550/.cache/
 
 # d=$1

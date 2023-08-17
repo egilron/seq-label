@@ -22,7 +22,7 @@ from transformers.utils import check_min_version, send_example_telemetry
 from transformers.utils.versions import require_version
 
 from src.local_parsers import ModelArguments, DataTrainingArguments
-from src.evaluate_tsa import evaluateur
+# from src.evaluate_tsa import evaluateur
 from modeling_norbert import NorbertForTokenClassification
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["WANDB_DISABLED"] = "true"
@@ -32,9 +32,9 @@ print("Transformers:", transformers.__version__)
 
 
 parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
-Path.mkdir("logs/jsons", exist_ok=True, parents=True)
-Path.mkdir("logs/training_args", exist_ok=True)
-Path.mkdir("logs/predictions", exist_ok=True)
+Path("logs","jsons").mkdir( exist_ok=True, parents=True)
+Path("logs","training_args").mkdir( exist_ok=True)
+Path("logs","predictions").mkdir( exist_ok=True)
 completed = os.listdir("logs/jsons")
 
 # Parse from json file submitted as argument to the .py file
