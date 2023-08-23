@@ -24,9 +24,7 @@ DIR=configs/fox/*
 # filter="08231013"
 for f in $DIR
 do
-    if [[ $f == "08231514"* ]]; then
-      echo $f
-      python seq_label.py $f # run_sq_label.py $f
-    fi
+    echo $f
+    python seq_label.py $f 
 done
 
