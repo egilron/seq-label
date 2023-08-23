@@ -76,6 +76,7 @@ default = {
     "load_best_model_at_end": True, #  
     "label_column_name": None,
     "disable_tqdm": True,
+    
     "do_predict": True,
     "text_column_name": "tokens"
 }

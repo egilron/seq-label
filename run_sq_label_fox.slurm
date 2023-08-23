@@ -21,10 +21,12 @@ export TRANSFORMERS_CACHE=/cluster/work/projects/ec30/IN5550/.cache/
 
 # d=$1
 DIR=configs/fox/*
-
+# filter="08231013"
 for f in $DIR
 do
-   echo $f
-   python seq_label.py $f # run_sq_label.py $f
+    if [[ $f == "08231514"* ]]; then
+      echo $f
+      python seq_label.py $f # run_sq_label.py $f
+    fi
 done
-# python seq_label.py configs/fox/06071555_ner_NorBERT_3_large_09.json
+

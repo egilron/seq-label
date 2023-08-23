@@ -269,7 +269,7 @@ trainer = Trainer(
 if training_args.do_train:
     train_result = trainer.train(resume_from_checkpoint=False)
     metrics = train_result.metrics
-    trainer.save_model()  # Saves the tokenizer too for easy upload
+    trainer.save_model(os.path.join(args_dict["output_dir"], "best_model"))  # Saves the tokenizer too for easy upload
     metrics["train_samples"] =  len(train_dataset)
     trainer.log_metrics("train", metrics)
     trainer.save_metrics("train", metrics)
