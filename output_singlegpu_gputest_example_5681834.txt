@@ -1,0 +1,29 @@
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Some weights of XLMRobertaForTokenClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Numpy: 1.25.2
+PyTorch: 2.0.1+rocm5.4.2
+Transformers: 4.36.2
+
+
+
+***Loading config file: configs/lumi/01121628_tsa-bin_XLM-R_base_02.json
+01121628_tsa-bin_XLM-R_base Our label2id: {'O': 0, 'B-targ-Negative': 1, 'I-targ-Negative': 2, 'B-targ-Positive': 3, 'I-targ-Positive': 4}
+Running tokenizer on train dataset:   0%|          | 0/8634 [00:00<?, ? examples/s]Running tokenizer on train dataset:  12%|█▏        | 1000/8634 [00:00<00:01, 7234.49 examples/s]Running tokenizer on train dataset:  35%|███▍      | 3000/8634 [00:00<00:00, 9029.83 examples/s]Running tokenizer on train dataset:  46%|████▋     | 4000/8634 [00:00<00:00, 9323.05 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8634 [00:00<00:00, 9520.49 examples/s]Running tokenizer on train dataset:  81%|████████  | 7000/8634 [00:00<00:00, 9906.60 examples/s]Running tokenizer on train dataset: 100%|██████████| 8634/8634 [00:00<00:00, 10182.24 examples/s]Running tokenizer on train dataset: 100%|██████████| 8634/8634 [00:00<00:00, 9661.80 examples/s] 
+Running tokenizer on validation dataset:   0%|          | 0/1531 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  65%|██████▌   | 1000/1531 [00:00<00:00, 8517.53 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1531/1531 [00:00<00:00, 7266.39 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/1272 [00:00<?, ? examples/s]Running tokenizer on test dataset:  79%|███████▊  | 1000/1272 [00:00<00:00, 7515.10 examples/s]Running tokenizer on test dataset: 100%|██████████| 1272/1272 [00:00<00:00, 7633.89 examples/s]
+01121628_tsa-bin_XLM-R_base Ready to train. Train dataset labels are now: ['idx', 'tokens', 'tsa_tags', 'input_ids', 'attention_mask', 'labels']
+Traceback (most recent call last):
+  File "/users/rnningst/seq-label_github-com/seq-label/seq_label.py", line 258, in <module>
+    trainer = Trainer(
+              ^^^^^^^^
+  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/trainer.py", line 513, in __init__
+    os.makedirs(self.args.output_dir, exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  [Previous line repeated 1 more time]
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 30] Read-only file system: '/scratch'
+srun: error: nid005024: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=5681834.0

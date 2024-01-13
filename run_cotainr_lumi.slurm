@@ -12,4 +12,5 @@
 #SBATCH --time=01:05:00
 #SBATCH --account=project_465000144
 
-srun singularity exec sqlabel24.sif python3 seq_label.py configs/lumi/01121628_tsa-bin_XLM-R_base_02.json
+export HF_HOME="shf"
+srun singularity exec --bind sscratch:/scratch sqlabel24.sif python3 seq_label.py configs/lumi/01121628_tsa-bin_XLM-R_base_02.json
