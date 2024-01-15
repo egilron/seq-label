@@ -1,0 +1,98 @@
+Starting job 408814 on gpu-7 at Mon Jan 15 09:51:34 CET 2024
+
+WARNING: You are using pip version 22.0.4; however, version 23.3.2 is available.
+You should consider upgrading via the '/fp/homes01/u01/ec-egilron/venvs/transformers/bin/python -m pip install --upgrade pip' command.
+Collecting accelerate
+  Downloading accelerate-0.26.1-py3-none-any.whl (270 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 270.9/270.9 KB 1.7 MB/s eta 0:00:00
+Requirement already satisfied: torch>=1.10.0 in /cluster/software/EL9/easybuild/software/PyTorch/1.12.1-foss-2022a-CUDA-11.7.0/lib/python3.10/site-packages (from accelerate) (1.12.1)
+Requirement already satisfied: pyyaml in /cluster/software/EL9/easybuild/software/PyYAML/6.0-GCCcore-11.3.0/lib/python3.10/site-packages (from accelerate) (6.0)
+Requirement already satisfied: safetensors>=0.3.1 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from accelerate) (0.4.1)
+Requirement already satisfied: numpy>=1.17 in /cluster/software/EL9/easybuild/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages (from accelerate) (1.22.3)
+Collecting psutil
+  Downloading psutil-5.9.7-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (285 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 285.5/285.5 KB 12.2 MB/s eta 0:00:00
+Requirement already satisfied: huggingface-hub in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from accelerate) (0.20.2)
+Requirement already satisfied: packaging>=20.0 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from accelerate) (23.2)
+Requirement already satisfied: typing_extensions in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from torch>=1.10.0->accelerate) (4.9.0)
+Requirement already satisfied: filelock in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (3.13.1)
+Requirement already satisfied: requests in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (2.31.0)
+Requirement already satisfied: tqdm>=4.42.1 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (4.66.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (2023.10.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (2.1.0)
+Requirement already satisfied: certifi>=2017.4.17 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (2023.11.17)
+Requirement already satisfied: idna<4,>=2.5 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (3.6)
+Installing collected packages: psutil, accelerate
+Successfully installed accelerate-0.26.1 psutil-5.9.7
+WARNING: You are using pip version 22.0.4; however, version 23.3.2 is available.
+You should consider upgrading via the '/fp/homes01/u01/ec-egilron/venvs/transformers/bin/python -m pip install --upgrade pip' command.
+configs/fox/01150919_tsa-intens*
+/fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages/transformers/utils/hub.py:123: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+seq_label.py Made for getting one parameter, the json config file
+
+Task and CPU usage stats:
+JobID           JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+408814       tsa_norbe+          1                                             00:01:11      0:0 
+408814.batch      batch          1        1   00:00:28          0   00:00:28   00:01:11      0:0 
+408814.exte+     extern          1        1   00:00:00          0   00:00:00   00:01:11      0:0 
+
+Memory usage stats:
+JobID            MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+408814                                                                           
+408814.batch    103488K          0    103488K        1              0          1 
+408814.exte+          0          0          0        0              0          0 
+
+Disk usage stats:
+JobID         MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+408814                                                                                                
+408814.batch      364.07M               0        364.07M      491.41M                0        491.41M 
+408814.exte+        0.01M               0          0.01M        0.00M                0          0.00M 
+
+GPU usage stats:
+Successfully retrieved statistics for job: 408814. 
++------------------------------------------------------------------------------+
+| GPU ID: 1                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Mon Jan 15 09:51:34 2024                |
+| End Time                           | Mon Jan 15 09:52:44 2024                |
+| Total Execution Time (sec)         | 70.59                                   |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 1326                                    |
+| Power Usage (Watts)                | Avg: 43.184, Max: 43.201, Min: 43.167   |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 210, Max: 210, Min: 210            |
+| Memory Clock (MHz)                 | Avg: 1512, Max: 1512, Min: 1512         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
+
+Job 408814 completed at Mon Jan 15 09:52:44 CET 2024

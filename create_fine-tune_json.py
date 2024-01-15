@@ -23,12 +23,10 @@ ms, ds, local_out_dir = None, None, None
 # If not, they can be specified here above
 
 
-ms = { "NorBERT_3_small": "ltg/norbert3-small",
+ms = { "NorBERT_base": "ltg/norbert",
+      "NorBERT_2_base": "ltg/norbert2",
     "NorBERT_3_base": "ltg/norbert3-base", 
-    "XLM-R_base": "xlm-roberta-base",
-    "NB-Roberta_base": "NbAiLab/nb-roberta-base-ncc-plus-scandi-1e4",
-    "NB-BERT_large": "NbAiLab/nb-bert-large",
-    "NorBERT_3_large": "ltg/norbert3-large",
+
       }
 
 # Comma in path will be used to extract config alternative from HF
@@ -51,21 +49,22 @@ if WHERE == "lumi":
 
 assert not any([e is None for e in [ms, ds, local_out_dir]]), "ms, ds, and local_out_dir need values set above here"
 
-
+hidden_dropout = [0.5, 0.2] # Default 0.5
+seeds = [303]
 
 # Add training args as needed
 default = {
     "model_name_or_path": None, #ms["brent0"] ,
     "dataset_name": None,
     "seed": 101,
-    "per_device_train_batch_size": 32,
+    "per_device_train_batch_size": 64,
     "task_name": "tsa", # Change this in iteration if needed
     "output_dir": local_out_dir,   # Add to this in iteration to avoid overwriting
     "overwrite_cache": True,
     "overwrite_output_dir": True,
     "do_train": True,
     "num_train_epochs": 16,
-    # "num_warmup_steps": 50, # Must go to the optimizer
+    "learning_rate": 5e-5,
     "do_eval": True,
     "return_entity_level_metrics": False, # True,
     "use_auth_token": False,
@@ -84,23 +83,28 @@ default = {
 
 
 # Iterations: design this according to needs
-for task in ["tsa-bin"]: #ds.keys():
+for task in ["tsa-intensity"]: #ds.keys():
     experiments = [] # List of dicts, one dict per experiments: Saves one separate json file each
-    for i, ( b_size, l_rate) in enumerate(itertools.product( [32, 64], [1e-4, 5e-5, 1e-5])):
+    for i, (  l_rate, dropout, seed) in enumerate(itertools.product([ 5e-5, 2e-5], hidden_dropout, seeds)):
         for m_name, m_path in ms.items():
             exp = default.copy()
-            exp ["per_device_train_batch_size"] = b_size
+            # exp ["per_device_train_batch_size"] = b_size
             exp["learning_rate"] = l_rate
-
+            exp["seed"] = seed
             exp["model_name_or_path"] = m_path
             exp["dataset_name"] = ds [task]
             exp["task_name"] = f"{timestamp}_{task}_{m_name}" # Add seed in name if needed
-            exp["output_dir"] = os.path.join(default["output_dir"], exp["task_name"] )
+            exp["output_dir"] = os.path.join(default["output_dir"], exp["task_name"],  )
             exp["label_column_name"] = label_col.get(task, "")
 
-            experiments.append({"timestamp":timestamp, "num_seeds": 5,
-                                "task":task, "model_shortname": m_name,
-                                "machinery":WHERE,"args_dict":exp, "best_epoch":None})
+            experiments.append({"timestamp":timestamp, 
+                                "task":task, 
+                                "model_shortname": m_name,
+                                "num_seeds": len(seeds),
+                                "hidden_dropout":dropout,
+                                "machinery":WHERE,
+                                "args_dict":exp, 
+                                "best_epoch":None})
 
     for i, exp in enumerate(experiments): # Move this with the experiments list definition to make subfolders
         args_dict = exp["args_dict"] # The args_dict was initially the entire exp

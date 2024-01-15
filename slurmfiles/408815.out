@@ -1,0 +1,94 @@
+Starting job 408815 on gpu-7 at Mon Jan 15 09:53:04 CET 2024
+
+WARNING: You are using pip version 22.0.4; however, version 23.3.2 is available.
+You should consider upgrading via the '/fp/homes01/u01/ec-egilron/venvs/transformers/bin/python -m pip install --upgrade pip' command.
+Collecting accelerate
+  Using cached accelerate-0.26.1-py3-none-any.whl (270 kB)
+Requirement already satisfied: huggingface-hub in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from accelerate) (0.20.2)
+Collecting psutil
+  Using cached psutil-5.9.7-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (285 kB)
+Requirement already satisfied: numpy>=1.17 in /cluster/software/EL9/easybuild/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages (from accelerate) (1.22.3)
+Requirement already satisfied: safetensors>=0.3.1 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from accelerate) (0.4.1)
+Requirement already satisfied: pyyaml in /cluster/software/EL9/easybuild/software/PyYAML/6.0-GCCcore-11.3.0/lib/python3.10/site-packages (from accelerate) (6.0)
+Requirement already satisfied: packaging>=20.0 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from accelerate) (23.2)
+Requirement already satisfied: torch>=1.10.0 in /cluster/software/EL9/easybuild/software/PyTorch/1.12.1-foss-2022a-CUDA-11.7.0/lib/python3.10/site-packages (from accelerate) (1.12.1)
+Requirement already satisfied: typing_extensions in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from torch>=1.10.0->accelerate) (4.9.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (2023.10.0)
+Requirement already satisfied: filelock in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (3.13.1)
+Requirement already satisfied: tqdm>=4.42.1 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (4.66.1)
+Requirement already satisfied: requests in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from huggingface-hub->accelerate) (2.31.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (3.3.2)
+Requirement already satisfied: certifi>=2017.4.17 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (2023.11.17)
+Requirement already satisfied: idna<4,>=2.5 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages (from requests->huggingface-hub->accelerate) (2.1.0)
+Installing collected packages: psutil, accelerate
+Successfully installed accelerate-0.26.1 psutil-5.9.7
+WARNING: You are using pip version 22.0.4; however, version 23.3.2 is available.
+You should consider upgrading via the '/fp/homes01/u01/ec-egilron/venvs/transformers/bin/python -m pip install --upgrade pip' command.
+configs/fox/01150919_tsa-bin*
+/fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages/transformers/utils/hub.py:123: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+seq_label.py Made for getting one parameter, the json config file
+
+Task and CPU usage stats:
+JobID           JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+408815       tsa_norbe+          1                                             00:01:02      0:0 
+408815.batch      batch          1        1   00:00:28          0   00:00:28   00:01:02      0:0 
+408815.exte+     extern          1        1   00:00:00          0   00:00:00   00:01:02      0:0 
+
+Memory usage stats:
+JobID            MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+408815                                                                           
+408815.batch    106220K          0    106220K        0              0          0 
+408815.exte+          0          0          0        0              0          0 
+
+Disk usage stats:
+JobID         MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+408815                                                                                                
+408815.batch      380.23M               0        380.23M      359.83M                0        359.83M 
+408815.exte+        0.01M               0          0.01M        0.00M                0          0.00M 
+
+GPU usage stats:
+Successfully retrieved statistics for job: 408815. 
++------------------------------------------------------------------------------+
+| GPU ID: 1                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Mon Jan 15 09:53:04 2024                |
+| End Time                           | Mon Jan 15 09:54:05 2024                |
+| Total Execution Time (sec)         | 61.16                                   |
+| No. of Processes                   | 0                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 1335                                    |
+| Power Usage (Watts)                | Avg: 43.2895, Max: 43.325, Min: 43.254  |
+| Max GPU Memory Used (bytes)        | 0                                       |
+| SM Clock (MHz)                     | Avg: 210, Max: 210, Min: 210            |
+| Memory Clock (MHz)                 | Avg: 1512, Max: 1512, Min: 1512         |
+| SM Utilization (%)                 | Avg: 0, Max: 0, Min: 0                  |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
+
+Job 408815 completed at Mon Jan 15 09:54:05 CET 2024

@@ -1,5 +1,5 @@
-from datasets import ClassLabel,  load_dataset, load_from_disk, DatasetDict, Dataset
 import os, sys, json
+from datasets import ClassLabel,  load_dataset, load_from_disk, DatasetDict, Dataset
 from pathlib import Path
 import evaluate
 import transformers
@@ -48,6 +48,8 @@ if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
     
 else:
     print(sys.argv[0], "Made for getting one parameter, the json config file")
+    if len(sys.argv) == 2:
+        print("Got", sys.argv[1])
     sys.exit()
 
 model_args, data_args, training_args = parser.parse_dict(args_dict)
@@ -57,9 +59,13 @@ Path("logs/training_args", config_name+".json").write_text(json.dumps(training_a
 if config_name in completed:
     print(config_name, "seems to be completed. Exiting")
     sys.exit()
+else: # Write a dummy in case we have multiple processes running
+    Path("logs/jsons", config_name+".json").write_text("LOCKED")
+
 
 # Check if comma in dataset path: Parameter for loading from Huggingface
 if "," in args_dict["output_dir"]:
+    #TODO
     addr, config = args_dict["output_dir"].split(",")
     
 
@@ -320,4 +326,4 @@ config_json["train_epochs_val"] = epoch_eval
 
 config_path.write_text(json.dumps(config_json))
 Path("logs/predictions", config_name+".json").write_text(json.dumps(true_predictions))
-print(f"Train and save best epoch to {sys.argv[1]} completed.")
+print(f"Train and save best epoch to {sys.argv[1]} completed. F1:", seqeval_f1)
