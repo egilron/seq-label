@@ -49,6 +49,8 @@ if WHERE == "fox":
 if WHERE == "lumi":
     local_out_dir = "/scratch/project_465000144/egilron/sq_label"
 
+
+
 assert not any([e is None for e in [ms, ds, local_out_dir]]), "ms, ds, and local_out_dir need values set above here"
 
 
@@ -76,7 +78,7 @@ default = {
     "load_best_model_at_end": True, #  
     "label_column_name": None,
     "disable_tqdm": True,
-    
+    "report_to": None,
     "do_predict": True,
     "text_column_name": "tokens"
 }
