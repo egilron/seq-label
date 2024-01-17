@@ -25,8 +25,9 @@ ms, ds, local_out_dir = None, None, None
 
 ms = { "NorBERT_3_small": "ltg/norbert3-small",
     "NorBERT_3_base": "ltg/norbert3-base", 
-    "XLM-R_base": "xlm-roberta-base",
-    "NB-Roberta_base": "NbAiLab/nb-roberta-base-ncc-plus-scandi-1e4",
+    "NorBERT_1": "ltg/norbert", 
+    "NorBERT_2": "ltg/norbert2", 
+    "NB-BERT_base": "NbAiLab/nb-bert-base",
     "NB-BERT_large": "NbAiLab/nb-bert-large",
     "NorBERT_3_large": "ltg/norbert3-large",
       }
@@ -37,7 +38,7 @@ ds = {"tsa-bin": "data/tsa_binary",
 
 local_out_dir = None
 
-WHERE = "lumi"
+WHERE = "fox"
 if WHERE == "hp":
     local_out_dir = "~/tsa_testing"
 
@@ -66,7 +67,7 @@ default = {
     "overwrite_cache": True,
     "overwrite_output_dir": True,
     "do_train": True,
-    "num_train_epochs": 16,
+    "num_train_epochs": 24,
     # "num_warmup_steps": 50, # Must go to the optimizer
     "do_eval": True,
     "return_entity_level_metrics": False, # True,
@@ -86,9 +87,9 @@ default = {
 
 
 # Iterations: design this according to needs
-for task in ["tsa-bin"]: #ds.keys():
+for task in ["tsa-intensity"]: #ds.keys(): # ,"tsa-bin"
     experiments = [] # List of dicts, one dict per experiments: Saves one separate json file each
-    for i, ( b_size, l_rate) in enumerate(itertools.product( [ 64], [ 5e-5, 1e-5, 1e-6])):
+    for i, ( b_size, l_rate) in enumerate(itertools.product( [40, 64], [ 5e-5, 8e-5,1e-4 ])):
         for m_name, m_path in ms.items():
             exp = default.copy()
             exp ["per_device_train_batch_size"] = b_size
@@ -100,7 +101,7 @@ for task in ["tsa-bin"]: #ds.keys():
             exp["output_dir"] = os.path.join(default["output_dir"], exp["task_name"] )
             exp["label_column_name"] = label_col.get(task, "")
 
-            experiments.append({"timestamp":timestamp, "num_seeds": 5,
+            experiments.append({"timestamp":timestamp, "num_seeds": 1,
                                 "task":task, "model_shortname": m_name,
                                 "machinery":WHERE,"args_dict":exp, "best_epoch":None})
 
