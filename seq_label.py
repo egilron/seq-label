@@ -23,7 +23,7 @@ from transformers.utils.versions import require_version
 
 from src.local_parsers import ModelArguments, DataTrainingArguments
 # from src.evaluate_tsa import evaluateur
-from modeling_norbert import NorbertForTokenClassification
+# from modeling_norbert import NorbertForTokenClassification
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["WANDB_DISABLED"] = "true"
 print("Numpy:", np.version.version)
@@ -54,7 +54,7 @@ else:
 
 model_args, data_args, training_args = parser.parse_dict(args_dict)
 
-Path("logs/training_args", config_name+".json").write_text(json.dumps(training_args.to_dict()))
+
 # Check for completed already
 if config_name in completed:
     print(config_name, "seems to be completed. Exiting")
@@ -62,15 +62,16 @@ if config_name in completed:
 else: # Write a dummy in case we have multiple processes running
     Path("logs/jsons", config_name+".json").write_text("LOCKED")
 
+Path("logs/training_args", config_name+".json").write_text(json.dumps(training_args.to_dict()))
 
 # Check if comma in dataset path: Parameter for loading from Huggingface
-if "," in args_dict["output_dir"]:
-    #TODO
-    addr, config = args_dict["output_dir"].split(",")
+# if "," in args_dict["output_dir"]:
+#     #TODO
+#     addr, config = args_dict["output_dir"].split(",")
     
 
 
-
+trust_remote_code=model_args.model_name_or_path.startswith("ltg/norbert") # norbert3 uses the config files from the HF repo.
 text_column_name = data_args.text_column_name
 label_column_name = data_args.label_column_name
 assert data_args.label_all_tokens == False, "Our script only labels first subword token"
@@ -98,7 +99,7 @@ config = AutoConfig.from_pretrained(
     cache_dir=model_args.cache_dir,
     revision=model_args.model_revision,
     use_auth_token=True if model_args.use_auth_token else None,
-    trust_remote_code=True
+    trust_remote_code=trust_remote_code
 )
 tokenizer_name_or_path = model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path
 if config.model_type in {"gpt2", "roberta"}:
@@ -121,18 +122,18 @@ else:
 
 # %%
 # Instanciate the model
-if "norbert3" in model_args.model_name_or_path:
+if False: #"norbert3" in model_args.model_name_or_path:
+    pass
 
-    model = NorbertForTokenClassification.from_pretrained(
-        model_args.model_name_or_path,
-        from_tf=bool(".ckpt" in model_args.model_name_or_path),
-        config=config,
-        cache_dir=model_args.cache_dir,
-        revision=model_args.model_revision,
-        use_auth_token=True if model_args.use_auth_token else None,
-        ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
-    )
-
+    # model = NorbertForTokenClassification.from_pretrained(
+    #     model_args.model_name_or_path,
+    #     from_tf=bool(".ckpt" in model_args.model_name_or_path),
+    #     config=config,
+    #     cache_dir=model_args.cache_dir,
+    #     revision=model_args.model_revision,
+    #     use_auth_token=True if model_args.use_auth_token else None,
+    #     ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
+    # )
 
 else:
         model = AutoModelForTokenClassification.from_pretrained(

@@ -47,7 +47,10 @@ print("WHERE:", WHERE)
 
 if WHERE == "hp":
     local_out_dir = "~/tsa_testing"
-
+    ms = { 
+    "NorBERT_3_base": "ltg/norbert3-base", 
+    "NB-BERT_base": "NbAiLab/nb-bert-base",
+    }
 
 if WHERE == "fox":
     local_out_dir = "/cluster/work/projects/ec30/egilron/tsa-hf"
