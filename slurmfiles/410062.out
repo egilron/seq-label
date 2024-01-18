@@ -1,0 +1,304 @@
+Starting job 410062 on gpu-7 at Thu Jan 18 11:08:06 CET 2024
+
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_27.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_27.json
+01170939_tsa-bin_NorBERT_3_large_27.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_25.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_25.json
+01170939_tsa-bin_NB-BERT_base_25.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_2_03.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_2_03.json
+01170939_tsa-bin_NorBERT_2_03.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_37.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_37.json
+01170939_tsa-bin_NorBERT_1_37.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_08.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_08.json
+01170939_tsa-bin_NorBERT_3_base_08.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_30.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_30.json
+01170939_tsa-bin_NorBERT_1_30.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_16.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_16.json
+01170939_tsa-bin_NorBERT_1_16.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_00.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_00.json
+01170939_tsa-bin_NorBERT_3_small_00.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_06.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_06.json
+01170939_tsa-bin_NorBERT_3_large_06.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_01.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_01.json
+01170939_tsa-bin_NorBERT_3_base_01.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_35.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_35.json
+01170939_tsa-bin_NorBERT_3_small_35.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_12.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_12.json
+01170939_tsa-bin_NB-BERT_large_12.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_40.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_40.json
+01170939_tsa-bin_NB-BERT_large_40.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_23.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_23.json
+01170939_tsa-bin_NorBERT_1_23.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_36.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_36.json
+01170939_tsa-bin_NorBERT_3_base_36.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_18.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_18.json
+01170939_tsa-bin_NB-BERT_base_18.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_04.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_04.json
+01170939_tsa-bin_NB-BERT_base_04.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_2_24.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_2_24.json
+01170939_tsa-bin_NorBERT_2_24.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_26.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_26.json
+01170939_tsa-bin_NB-BERT_large_26.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_11.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_base_11.json
+01170939_tsa-bin_NB-BERT_base_11.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_2_31.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_2_31.json
+01170939_tsa-bin_NorBERT_2_31.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_41.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_41.json
+01170939_tsa-bin_NorBERT_3_large_41.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_29.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_29.json
+01170939_tsa-bin_NorBERT_3_base_29.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_05.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NB-BERT_large_05.json
+01170939_tsa-bin_NB-BERT_large_05.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_14.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_14.json
+01170939_tsa-bin_NorBERT_3_small_14.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_15.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_base_15.json
+01170939_tsa-bin_NorBERT_3_base_15.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_07.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_small_07.json
+01170939_tsa-bin_NorBERT_3_small_07.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_02.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_1_02.json
+01170939_tsa-bin_NorBERT_1_02.json seems to be completed. Exiting
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_34.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170939_tsa-bin_NorBERT_3_large_34.json
+01170939_tsa-bin_NorBERT_3_large Our label2id: {'O': 0, 'B-targ-Negative': 1, 'I-targ-Negative': 2, 'B-targ-Positive': 3, 'I-targ-Positive': 4}
+Running tokenizer on train dataset:   0%|          | 0/8634 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:  12%|█▏        | 1000/8634 [00:00<00:01, 5611.30 examples/s]Running tokenizer on train dataset:  23%|██▎       | 2000/8634 [00:00<00:01, 6505.67 examples/s]Running tokenizer on train dataset:  35%|███▍      | 3000/8634 [00:00<00:00, 6525.60 examples/s]Running tokenizer on train dataset:  46%|████▋     | 4000/8634 [00:00<00:00, 6638.13 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8634 [00:00<00:00, 6726.64 examples/s]Running tokenizer on train dataset:  69%|██████▉   | 6000/8634 [00:00<00:00, 6871.60 examples/s]Running tokenizer on train dataset:  81%|████████  | 7000/8634 [00:01<00:00, 7046.81 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 8000/8634 [00:01<00:00, 6189.81 examples/s]Running tokenizer on train dataset: 100%|██████████| 8634/8634 [00:01<00:00, 6501.84 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/1531 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  65%|██████▌   | 1000/1531 [00:00<00:00, 7209.16 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1531/1531 [00:00<00:00, 6790.68 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/1272 [00:00<?, ? examples/s]Running tokenizer on test dataset:  79%|███████▊  | 1000/1272 [00:00<00:00, 5651.63 examples/s]Running tokenizer on test dataset: 100%|██████████| 1272/1272 [00:00<00:00, 5750.25 examples/s]
+You're using a PreTrainedTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Checkpoint destination directory /cluster/work/projects/ec30/egilron/tsa-hf/01170939_tsa-bin_NorBERT_3_large/checkpoint-135 already exists and is non-empty.Saving will proceed but saved results may be invalid.
+/fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/fp/homes01/u01/ec-egilron/venvs/transformers/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))

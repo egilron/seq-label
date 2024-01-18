@@ -25,7 +25,7 @@ export HF_HOME=/cluster/work/projects/ec30/egilron/.cache/
 
 FOLDER="/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/"
 
-filter="01170944_tsa-intensity*.json"
+filter="01170939_tsa-bin*.json"
 
 
 jsons=$(find $FOLDER -name $filter); #  -name '${filter}*'
