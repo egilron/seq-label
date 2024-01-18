@@ -1,1 +1,1 @@
-/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170944_tsa-intensity_NorBERT_3_large_13.json
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01170944_tsa-intensity_NorBERT_3_base_29.json
