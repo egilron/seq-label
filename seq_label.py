@@ -71,7 +71,7 @@ Path("logs/training_args", config_name+".json").write_text(json.dumps(training_a
     
 
 
-trust_remote_code=model_args.model_name_or_path.startswith("ltg/norbert") # norbert3 uses the config files from the HF repo.
+trust_remote=model_args.model_name_or_path.startswith("ltg/norbert") # norbert3 uses the config files from the HF repo.
 text_column_name = data_args.text_column_name
 label_column_name = data_args.label_column_name
 assert data_args.label_all_tokens == False, "Our script only labels first subword token"
@@ -99,8 +99,9 @@ config = AutoConfig.from_pretrained(
     cache_dir=model_args.cache_dir,
     revision=model_args.model_revision,
     use_auth_token=True if model_args.use_auth_token else None,
-    trust_remote_code=trust_remote_code
+    trust_remote_code=trust_remote
 )
+
 tokenizer_name_or_path = model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path
 if config.model_type in {"gpt2", "roberta"}:
     tokenizer = AutoTokenizer.from_pretrained(
@@ -113,11 +114,11 @@ if config.model_type in {"gpt2", "roberta"}:
     )
 else:
     tokenizer = AutoTokenizer.from_pretrained(
-        tokenizer_name_or_path,
-        cache_dir=model_args.cache_dir,
-        use_fast=True,
-        revision=model_args.model_revision,
-        use_auth_token=True if model_args.use_auth_token else None,
+    tokenizer_name_or_path,
+    cache_dir=model_args.cache_dir,
+    use_fast=True,
+    revision=model_args.model_revision,
+    use_auth_token=True if model_args.use_auth_token else None,
     )
 
 # %%
@@ -136,13 +137,14 @@ if False: #"norbert3" in model_args.model_name_or_path:
     # )
 
 else:
-        model = AutoModelForTokenClassification.from_pretrained(
-        model_args.model_name_or_path,
-        from_tf=bool(".ckpt" in model_args.model_name_or_path),
-        config=config,
-        cache_dir=model_args.cache_dir,
-        revision=model_args.model_revision,
-        ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
+    model = AutoModelForTokenClassification.from_pretrained(
+    model_args.model_name_or_path,
+    from_tf=bool(".ckpt" in model_args.model_name_or_path),
+    config=config,
+    cache_dir=model_args.cache_dir,
+    revision=model_args.model_revision,
+    ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
+    trust_remote_code=trust_remote,
     )
 
 
