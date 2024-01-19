@@ -132,5 +132,5 @@ dmypy.json
 cache*
 bash-out.txt
 output*.txt
-*.json.json
 zips/
+logs/jsons/*.json.json
