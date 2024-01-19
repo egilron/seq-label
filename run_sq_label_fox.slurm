@@ -4,7 +4,7 @@
 #SBATCH --account=ec30
 #SBATCH --partition=accel_long    # accel_long should give A100's
 #SBATCH --gres=gpu:1
-#SBATCH --time=9:00:00     
+#SBATCH --time=23:00:00     
 #SBATCH --mem-per-cpu=16G
 #SBATCH --nodes=1
 #SBATCH --output=slurmfiles/%j.out
@@ -25,7 +25,7 @@ export HF_HOME=/cluster/work/projects/ec30/egilron/.cache/
 
 FOLDER="/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/"
 
-filter="01170939_tsa-bin*.json"
+filter="01191518*.json"
 
 
 jsons=$(find $FOLDER -name $filter); #  -name '${filter}*'

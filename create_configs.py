@@ -35,7 +35,7 @@ ms = { "NorBERT_3_small": "ltg/norbert3-small",
 # Comma in path will be used to extract config alternative from HF
 ds = {"tsa-bin": "data/tsa_binary",
       "tsa-intensity":"data/tsa_intensity" }
-
+LOCAL_DATASET = list(ds.values())[0].startswith("data/") # We want to ba able to force this here, and not depend on the character pattern if needed.
 local_out_dir = None
 
 WHERE = "fox"
@@ -103,7 +103,8 @@ for task in ["tsa-intensity"]: #ds.keys(): # ,"tsa-bin"
 
             experiments.append({"timestamp":timestamp, "num_seeds": 1,
                                 "task":task, "model_shortname": m_name,
-                                "machinery":WHERE,"args_dict":exp, "best_epoch":None})
+                                "machinery":WHERE,
+                                "local_dataset": LOCAL_DATASET,"args_dict":exp, "best_epoch":None})
 
     for i, exp in enumerate(experiments): # Move this with the experiments list definition to make subfolders
         args_dict = exp["args_dict"] # The args_dict was initially the entire exp

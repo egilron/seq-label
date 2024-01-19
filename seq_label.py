@@ -42,7 +42,7 @@ completed = os.listdir("logs/jsons")
 if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
     print("\n\n\n***Loading config file:", sys.argv[1])
     config_path = Path(sys.argv[1]).resolve()
-    config_name = config_path.name
+    config_name = config_path.name # including .json
     config_json = json.loads(config_path.read_text())
     args_dict = config_json["args_dict"]
     
@@ -54,27 +54,31 @@ else:
 
 model_args, data_args, training_args = parser.parse_dict(args_dict)
 
-Path("logs/training_args", config_name+".json").write_text(json.dumps(training_args.to_dict()))
+Path("logs/training_args", config_name).write_text(json.dumps(training_args.to_dict()))
 # Check for completed already
 if config_name in completed:
     print(config_name, "seems to be completed. Exiting")
     sys.exit()
 else: # Write a dummy in case we have multiple processes running
-    Path("logs/jsons", config_name+".json").write_text("LOCKED")
-
-
-# Check if comma in dataset path: Parameter for loading from Huggingface
-if "," in args_dict["output_dir"]:
-    #TODO
-    addr, config = args_dict["output_dir"].split(",")
-    
-
+    Path("logs/jsons", config_name).write_text("LOCKED")
 
 
 text_column_name = data_args.text_column_name
 label_column_name = data_args.label_column_name
 assert data_args.label_all_tokens == False, "Our script only labels first subword token"
-dsd = load_from_disk(data_args.dataset_name)
+# Load data from HF or disk. 
+use_local_data = config_json.get("local_dataset", False)
+if use_local_data:
+    dsd = load_from_disk(data_args.dataset_name)
+else: 
+    ds_version = "default"
+    if "," in data_args.dataset_name: # Version / variant identifier
+        ds_path, ds_version = data_args.dataset_name.split(",")
+    else:
+        ds_path = data_args.dataset_name
+    dsd = load_dataset(ds_path.strip(),ds_version.strip() )
+    
+
 transformers.logging.set_verbosity_warning()
 # %%
 def get_label_list(labels):
@@ -325,5 +329,5 @@ config_json["best_epoch"] = best_epoch
 config_json["train_epochs_val"] = epoch_eval
 
 config_path.write_text(json.dumps(config_json))
-Path("logs/predictions", config_name+".json").write_text(json.dumps(true_predictions))
+Path("logs/predictions", config_name).write_text(json.dumps(true_predictions))
 print(f"Train and save best epoch to {sys.argv[1]} completed. F1:", seqeval_f1)
