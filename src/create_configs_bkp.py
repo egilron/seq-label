@@ -1,4 +1,4 @@
-import os, sys, json
+import os, json
 from pathlib import Path
 from datetime import datetime
 import itertools
@@ -23,29 +23,22 @@ ms, ds, local_out_dir = None, None, None
 # If not, they can be specified here above
 
 
-ms = { 
+ms = { "NorBERT_3_small": "ltg/norbert3-small",
     "NorBERT_3_base": "ltg/norbert3-base", 
-    "NorBERT_3_large": "ltg/norbert3-large",
+    "NorBERT_1": "ltg/norbert", 
+    "NorBERT_2": "ltg/norbert2", 
     "NB-BERT_base": "NbAiLab/nb-bert-base",
     "NB-BERT_large": "NbAiLab/nb-bert-large",
-    
+    "NorBERT_3_large": "ltg/norbert3-large",
       }
 
-# ds = {"tsa-bin": "data/tsa_binary",
-    #   "tsa-intensity":"data/tsa_intensity" }
-ds = {"tsa-bin": "ltg/norec_tsa,default",
-      "tsa-intensity":"ltg/norec_tsa,intensity"}
+# Comma in path will be used to extract config alternative from HF
+ds = {"tsa-bin": "data/tsa_binary",
+      "tsa-intensity":"data/tsa_intensity" }
 LOCAL_DATASET = list(ds.values())[0].startswith("data/") # We want to ba able to force this here, and not depend on the character pattern if needed.
-
-
 local_out_dir = None
+
 WHERE = "fox"
-if len(sys.argv) == 2:
-    WHERE = sys.argv[1]
-print("WHERE:", WHERE)
-
-
-
 if WHERE == "hp":
     local_out_dir = "~/tsa_testing"
 
@@ -56,6 +49,8 @@ if WHERE == "fox":
 
 if WHERE == "lumi":
     local_out_dir = "/scratch/project_465000144/egilron/sq_label"
+
+
 
 assert not any([e is None for e in [ms, ds, local_out_dir]]), "ms, ds, and local_out_dir need values set above here"
 
@@ -84,7 +79,7 @@ default = {
     "load_best_model_at_end": True, #  
     "label_column_name": None,
     "disable_tqdm": True,
-    
+    "report_to": None,
     "do_predict": True,
     "text_column_name": "tokens"
 }
@@ -92,9 +87,9 @@ default = {
 
 
 # Iterations: design this according to needs
-for task in ds.keys(): #["tsa-bin"]: #
+for task in ["tsa-intensity"]: #ds.keys(): # ,"tsa-bin"
     experiments = [] # List of dicts, one dict per experiments: Saves one separate json file each
-    for i, ( b_size, l_rate) in enumerate(itertools.product( [ 8, 16, 32,64], [  1e-5, 2e-5, 5e-5])):
+    for i, ( b_size, l_rate) in enumerate(itertools.product( [40, 64], [ 5e-5, 8e-5,1e-4 ])):
         for m_name, m_path in ms.items():
             exp = default.copy()
             exp ["per_device_train_batch_size"] = b_size
@@ -109,8 +104,7 @@ for task in ds.keys(): #["tsa-bin"]: #
             experiments.append({"timestamp":timestamp, "num_seeds": 1,
                                 "task":task, "model_shortname": m_name,
                                 "machinery":WHERE,
-                                "local_dataset": LOCAL_DATASET,
-                                "args_dict":exp, "best_epoch":None})
+                                "local_dataset": LOCAL_DATASET,"args_dict":exp, "best_epoch":None})
 
     for i, exp in enumerate(experiments): # Move this with the experiments list definition to make subfolders
         args_dict = exp["args_dict"] # The args_dict was initially the entire exp
@@ -120,5 +114,11 @@ for task in ds.keys(): #["tsa-bin"]: #
         print(str(save_path))
         with open(save_path, "w") as wf:
             json.dump(exp, wf)
+
+    # Standalone testing
+    # save_path = Path(CONFIG_ROOT,"standalone", args_dict["task_name"]+".json")
+    # save_path.parent.mkdir( parents=True, exist_ok=True)
+    # with open(save_path, "w") as wf:
+    #     json.dump(args_dict, wf)
 
 

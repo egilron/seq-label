@@ -1,53 +1,0 @@
-Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
-Some weights of XLMRobertaForTokenClassification were not initialized from the model checkpoint at xlm-roberta-base and are newly initialized: ['classifier.bias', 'classifier.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-Numpy: 1.25.2
-PyTorch: 2.0.1+rocm5.4.2
-Transformers: 4.36.2
-
-
-
-***Loading config file: configs/lumi/01121628_tsa-bin_XLM-R_base_02.json
-01121628_tsa-bin_XLM-R_base Our label2id: {'O': 0, 'B-targ-Negative': 1, 'I-targ-Negative': 2, 'B-targ-Positive': 3, 'I-targ-Positive': 4}
-Running tokenizer on train dataset:   0%|          | 0/8634 [00:00<?, ? examples/s]Running tokenizer on train dataset:  12%|█▏        | 1000/8634 [00:00<00:00, 8480.21 examples/s]Running tokenizer on train dataset:  35%|███▍      | 3000/8634 [00:00<00:00, 9508.16 examples/s]Running tokenizer on train dataset:  46%|████▋     | 4000/8634 [00:00<00:00, 9652.54 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8634 [00:00<00:00, 9747.01 examples/s]Running tokenizer on train dataset:  81%|████████  | 7000/8634 [00:00<00:00, 10050.93 examples/s]Running tokenizer on train dataset: 100%|██████████| 8634/8634 [00:00<00:00, 10278.00 examples/s]Running tokenizer on train dataset: 100%|██████████| 8634/8634 [00:00<00:00, 9906.34 examples/s] 
-Running tokenizer on validation dataset:   0%|          | 0/1531 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  65%|██████▌   | 1000/1531 [00:00<00:00, 9766.19 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1531/1531 [00:00<00:00, 9357.85 examples/s]
-Running tokenizer on test dataset:   0%|          | 0/1272 [00:00<?, ? examples/s]Running tokenizer on test dataset:  79%|███████▊  | 1000/1272 [00:00<00:00, 9399.17 examples/s]Running tokenizer on test dataset: 100%|██████████| 1272/1272 [00:00<00:00, 9163.03 examples/s]
-You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-01121628_tsa-bin_XLM-R_base Ready to train. Train dataset labels are now: ['idx', 'tokens', 'tsa_tags', 'input_ids', 'attention_mask', 'labels']
-{'loss': 0.2958, 'learning_rate': 4.6875e-05, 'epoch': 1.0}
-{'eval_loss': 0.2120862901210785, 'eval_precision': 0.27616747181964574, 'eval_recall': 0.39110604332953247, 'eval_f1': 0.32373761208117036, 'eval_accuracy': 0.930054813556705, 'eval_runtime': 1.8089, 'eval_samples_per_second': 846.379, 'eval_steps_per_second': 106.143, 'epoch': 1.0}
-{'loss': 0.1899, 'learning_rate': 4.375e-05, 'epoch': 2.0}
-{'eval_loss': 0.1655367910861969, 'eval_precision': 0.4357976653696498, 'eval_recall': 0.3831242873432155, 'eval_f1': 0.4077669902912622, 'eval_accuracy': 0.9478499189376979, 'eval_runtime': 1.7727, 'eval_samples_per_second': 863.655, 'eval_steps_per_second': 108.309, 'epoch': 2.0}
-Traceback (most recent call last):
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/torch/serialization.py", line 441, in save
-    _save(obj, opened_zipfile, pickle_module, pickle_protocol)
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/torch/serialization.py", line 668, in _save
-    zip_file.write_record(name, storage.data_ptr(), num_bytes)
-RuntimeError: [enforce fail at inline_container.cc:471] . PytorchStreamWriter failed writing file data/1: file write failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/users/rnningst/seq-label_github-com/seq-label/seq_label.py", line 270, in <module>
-    train_result = trainer.train(resume_from_checkpoint=False)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/trainer.py", line 1537, in train
-    return inner_training_loop(
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/trainer.py", line 1929, in _inner_training_loop
-    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/trainer.py", line 2279, in _maybe_log_save_evaluate
-    self._save_checkpoint(model, trial, metrics=metrics)
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/trainer.py", line 2359, in _save_checkpoint
-    self._save_optimizer_and_scheduler(staging_output_dir)
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/trainer.py", line 2462, in _save_optimizer_and_scheduler
-    torch.save(self.optimizer.state_dict(), os.path.join(output_dir, OPTIMIZER_NAME))
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/torch/serialization.py", line 440, in save
-    with _open_zipfile_writer(f) as opened_zipfile:
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/torch/serialization.py", line 291, in __exit__
-    self.file_like.write_end_of_file()
-RuntimeError: [enforce fail at inline_container.cc:337] . unexpected pos 51392 vs 51284
-srun: error: nid005024: task 0: Exited with exit code 1
-srun: launch/slurm: _step_signal: Terminating StepId=5681870.0

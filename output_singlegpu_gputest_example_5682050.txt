@@ -1,49 +1,0 @@
-Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
-/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py:983: UserWarning: Not enough free disk space to download the file. The expected file size is: 0.00 MB. The target location /users/rnningst/seq-label_github-com/seq-label/shf/hub only has 0.00 MB free disk space.
-  warnings.warn(
-/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py:983: UserWarning: Not enough free disk space to download the file. The expected file size is: 0.00 MB. The target location shf/hub/models--xlm-roberta-base/blobs only has 0.00 MB free disk space.
-  warnings.warn(
-Numpy: 1.25.2
-PyTorch: 2.0.1+rocm5.4.2
-Transformers: 4.36.2
-
-
-
-***Loading config file: configs/lumi/01121628_tsa-bin_XLM-R_base_02.json
-config.json:   0%|          | 0.00/615 [00:00<?, ?B/s]config.json: 100%|██████████| 615/615 [00:00<00:00, 4.99MB/s]
-/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py:983: UserWarning: Not enough free disk space to download the file. The expected file size is: 5.07 MB. The target location /users/rnningst/seq-label_github-com/seq-label/shf/hub only has 0.00 MB free disk space.
-  warnings.warn(
-/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py:983: UserWarning: Not enough free disk space to download the file. The expected file size is: 5.07 MB. The target location shf/hub/models--xlm-roberta-base/blobs only has 0.00 MB free disk space.
-  warnings.warn(
-sentencepiece.bpe.model:   0%|          | 0.00/5.07M [00:00<?, ?B/s]sentencepiece.bpe.model: 100%|██████████| 5.07M/5.07M [00:00<00:00, 7.38MB/s]sentencepiece.bpe.model: 100%|██████████| 5.07M/5.07M [00:00<00:00, 7.32MB/s]
-/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py:983: UserWarning: Not enough free disk space to download the file. The expected file size is: 9.10 MB. The target location /users/rnningst/seq-label_github-com/seq-label/shf/hub only has 0.00 MB free disk space.
-  warnings.warn(
-/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py:983: UserWarning: Not enough free disk space to download the file. The expected file size is: 9.10 MB. The target location shf/hub/models--xlm-roberta-base/blobs only has 0.00 MB free disk space.
-  warnings.warn(
-tokenizer.json:   0%|          | 0.00/9.10M [00:00<?, ?B/s]tokenizer.json: 100%|██████████| 9.10M/9.10M [00:00<00:00, 10.0MB/s]tokenizer.json: 100%|██████████| 9.10M/9.10M [00:00<00:00, 9.87MB/s]
-Traceback (most recent call last):
-  File "/users/rnningst/seq-label_github-com/seq-label/seq_label.py", line 108, in <module>
-    tokenizer = AutoTokenizer.from_pretrained(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 805, in from_pretrained
-    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 1987, in from_pretrained
-    resolved_vocab_files[file_id] = cached_file(
-                                    ^^^^^^^^^^^^
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/transformers/utils/hub.py", line 389, in cached_file
-    resolved_file = hf_hub_download(
-                    ^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
-    return fn(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1457, in hf_hub_download
-    http_get(
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 527, in http_get
-    temp_file.write(chunk)
-  File "/opt/conda/envs/conda_container_env/lib/python3.11/tempfile.py", line 483, in func_wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-OSError: [Errno 122] Disk quota exceeded
-srun: error: nid005024: task 0: Exited with exit code 1
-srun: launch/slurm: _step_signal: Terminating StepId=5682050.0
