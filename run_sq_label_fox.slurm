@@ -25,8 +25,8 @@ export HF_HOME=/cluster/work/projects/ec30/egilron/.cache/
 
 FOLDER="/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/"
 echo $FOLDER
-#filter="01191518_tsa_bin*.json"
-filter="01191518_tsa-bin_NorBERT_3_large_37_b.json*"
+#filter="01191518_tsa_bin*.json" 
+filter="01191518_tsa-bin_NorBERT_3_large_37_c.json*"
 
 
 jsons=$(find $FOLDER -name $filter); #  -name '${filter}*'
@@ -35,7 +35,8 @@ for f in $jsons
 do
     echo $f
     echo $f > bash-out.txt
-    python seq_label.py $f
+    # python seq_label.py $f
+    python seq_label_2024.py $f
 done
 
 

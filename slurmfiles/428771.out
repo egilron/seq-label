@@ -1,0 +1,77 @@
+Starting job 428771 on gpu-2 at Mon Feb 12 15:05:48 CET 2024
+
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/
+/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01191518_tsa-bin_NorBERT_3_base_16b.json
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.22.3
+PyTorch: 1.12.1
+Transformers: 4.36.2
+
+
+
+***Loading config file: /fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01191518_tsa-bin_NorBERT_3_base_16b.json
+01191518_tsa-bin_NorBERT_3_base_16b.json seems to be completed. Exiting
+
+Task and CPU usage stats:
+JobID           JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+428771       tsa_norbe+          1                                             00:00:34      0:0 
+428771.batch      batch          1        1   00:00:07          0   00:00:07   00:00:34      0:0 
+428771.exte+     extern          1        1   00:00:00          0   00:00:00   00:00:34      0:0 
+
+Memory usage stats:
+JobID            MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+428771                                                                           
+428771.batch    200724K          0    200724K        0              0          0 
+428771.exte+          0          0          0        0              0          0 
+
+Disk usage stats:
+JobID         MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+428771                                                                                                
+428771.batch       45.49M               0         45.49M        3.20M                0          3.20M 
+428771.exte+        0.01M               0          0.01M        0.00M                0          0.00M 
+
+GPU usage stats:
+Successfully retrieved statistics for job: 428771. 
++------------------------------------------------------------------------------+
+| GPU ID: 0                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Mon Feb 12 15:05:48 2024                |
+| End Time                           | Mon Feb 12 15:06:22 2024                |
+| Total Execution Time (sec)         | 33.74                                   |
+| No. of Processes                   | 1                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 0                                       |
+| Power Usage (Watts)                | Avg: 53.427, Max: 53.427, Min: 53.427   |
+| Max GPU Memory Used (bytes)        | 15523119104                             |
+| SM Clock (MHz)                     | Avg: 1395, Max: 1395, Min: 1395         |
+| Memory Clock (MHz)                 | Avg: 1215, Max: 1215, Min: 1215         |
+| SM Utilization (%)                 | Avg: 94, Max: 94, Min: 94               |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++--  Compute Process Utilization  ---+-----------------------------------------+
+| PID                                | 3118910                                 |
+|     Avg SM Utilization (%)         | 31                                      |
+|     Avg Memory Utilization (%)     | 24                                      |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
+
+Job 428771 completed at Mon Feb 12 15:06:22 CET 2024

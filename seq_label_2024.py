@@ -190,6 +190,7 @@ class DataTrainingArguments:
 
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+print("Python:", sys.version)
 print("Numpy:", np.version.version)
 print("PyTorch:", torch.__version__)
 print("Transformers:", transformers.__version__)
@@ -367,7 +368,7 @@ with training_args.main_process_first(desc="validation dataset map pre-processin
         load_from_cache_file=not data_args.overwrite_cache,
         desc="Running tokenizer on validation dataset",
     )
-with training_args.main_process_first(desc="validation dataset map pre-processing"):
+with training_args.main_process_first(desc="test dataset map pre-processing"):
     predict_dataset = dsd["test"].map(
         tokenize_and_align_labels,
         batched=True,
@@ -376,7 +377,7 @@ with training_args.main_process_first(desc="validation dataset map pre-processin
         desc="Running tokenizer on test dataset",
     )
 
-
+print("Tokenization completed")
 
 data_collator = DataCollatorForTokenClassification(tokenizer, pad_to_multiple_of=8 if training_args.fp16 else None)
 
@@ -397,7 +398,7 @@ def compute_metrics(p):
         for prediction, label in zip(predictions, labels)
     ]
 
-    results = metric.compute(predictions=true_predictions, references=true_labels)
+    results = metric.compute(predictions=true_predictions, references=true_labels, zero_division=0, scheme="IOB2")
     if data_args.return_entity_level_metrics:
         # Unpack nested dictionaries
         final_results = {}
@@ -416,8 +417,8 @@ def compute_metrics(p):
             "accuracy": results["overall_accuracy"],
         }
 
-# %%
-print(args_dict["task_name"],"Ready to train. Train dataset labels are now:", train_dataset.column_names)
+print("\nModel:", model_args.model_name_or_path, "Trust Remote code?", trust_remote)
+print(args_dict["task_name"],"\nReady to train. Train dataset labels are now:", train_dataset.column_names, "\n")
 trainer = Trainer(
     model=model,
     args=training_args,
