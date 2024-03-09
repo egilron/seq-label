@@ -1,0 +1,439 @@
+Starting job 10901754 on gpu-12-5 on saga at Fri Mar 8 11:05:50 CET 2024
+
+/cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_29.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_29.json
+03081014_elsa-intensity_NorBERT_3_large_29.json seems to be completed. Exiting
+/cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_04.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_04.json
+03081014_elsa-intensity_NorBERT_3_large Our label2id: {'O': 0, 'B-Negative_Slight': 1, 'I-Negative_Slight': 2, 'B-Negative_Standard': 3, 'I-Negative_Standard': 4, 'B-Neutral': 5, 'I-Neutral': 6, 'B-Positive_Slight': 7, 'I-Positive_Slight': 8, 'B-Positive_Standard': 9, 'I-Positive_Standard': 10}
+Running tokenizer on train dataset:   0%|          | 0/8570 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:  12%|█▏        | 1000/8570 [00:00<00:01, 7205.53 examples/s]Running tokenizer on train dataset:  23%|██▎       | 2000/8570 [00:00<00:00, 7607.01 examples/s]Running tokenizer on train dataset:  35%|███▌      | 3000/8570 [00:00<00:00, 7715.23 examples/s]Running tokenizer on train dataset:  47%|████▋     | 4000/8570 [00:00<00:00, 7600.36 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8570 [00:00<00:00, 7501.34 examples/s]Running tokenizer on train dataset:  70%|███████   | 6000/8570 [00:00<00:00, 7548.20 examples/s]Running tokenizer on train dataset:  82%|████████▏ | 7000/8570 [00:00<00:00, 7415.50 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 8000/8570 [00:01<00:00, 7474.52 examples/s]Running tokenizer on train dataset: 100%|██████████| 8570/8570 [00:01<00:00, 7429.94 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/1513 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  66%|██████▌   | 1000/1513 [00:00<00:00, 7342.56 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1513/1513 [00:00<00:00, 7240.25 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/1252 [00:00<?, ? examples/s]Running tokenizer on test dataset:  80%|███████▉  | 1000/1252 [00:00<00:00, 4365.17 examples/s]Running tokenizer on test dataset: 100%|██████████| 1252/1252 [00:00<00:00, 4065.10 examples/s]
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+03081014_elsa-intensity_NorBERT_3_large Ready to train. Train dataset labels are now: ['sent_id', 'tokens', 'elsa_labels', 'entity', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 9e-06, 'epoch': 1.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9151, 'eval_samples_per_second': 255.786, 'eval_steps_per_second': 32.121, 'epoch': 1.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 8.000000000000001e-06, 'epoch': 2.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9516, 'eval_samples_per_second': 254.216, 'eval_steps_per_second': 31.924, 'epoch': 2.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 7e-06, 'epoch': 3.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9216, 'eval_samples_per_second': 255.504, 'eval_steps_per_second': 32.086, 'epoch': 3.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 6e-06, 'epoch': 4.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.914, 'eval_samples_per_second': 255.831, 'eval_steps_per_second': 32.127, 'epoch': 4.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5e-06, 'epoch': 5.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9158, 'eval_samples_per_second': 255.754, 'eval_steps_per_second': 32.117, 'epoch': 5.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.000000000000001e-06, 'epoch': 6.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9177, 'eval_samples_per_second': 255.674, 'eval_steps_per_second': 32.107, 'epoch': 6.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3e-06, 'epoch': 7.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9224, 'eval_samples_per_second': 255.471, 'eval_steps_per_second': 32.082, 'epoch': 7.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.0000000000000003e-06, 'epoch': 8.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9277, 'eval_samples_per_second': 255.242, 'eval_steps_per_second': 32.053, 'epoch': 8.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.0000000000000002e-06, 'epoch': 9.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9402, 'eval_samples_per_second': 254.705, 'eval_steps_per_second': 31.985, 'epoch': 9.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0, 'epoch': 10.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 7.5448, 'eval_samples_per_second': 200.536, 'eval_steps_per_second': 25.183, 'epoch': 10.0}
+{'train_runtime': 1082.2889, 'train_samples_per_second': 79.184, 'train_steps_per_second': 4.952, 'train_loss': 0.0, 'epoch': 10.0}
+***** train metrics *****
+  epoch                    =       10.0
+  train_loss               =        0.0
+  train_runtime            = 0:18:02.28
+  train_samples            =       8570
+  train_samples_per_second =     79.184
+  train_steps_per_second   =      4.952
+[{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 9e-06, 'epoch': 1.0, 'step': 536}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9151, 'eval_samples_per_second': 255.786, 'eval_steps_per_second': 32.121, 'epoch': 1.0, 'step': 536}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 8.000000000000001e-06, 'epoch': 2.0, 'step': 1072}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9516, 'eval_samples_per_second': 254.216, 'eval_steps_per_second': 31.924, 'epoch': 2.0, 'step': 1072}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 7e-06, 'epoch': 3.0, 'step': 1608}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9216, 'eval_samples_per_second': 255.504, 'eval_steps_per_second': 32.086, 'epoch': 3.0, 'step': 1608}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 6e-06, 'epoch': 4.0, 'step': 2144}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.914, 'eval_samples_per_second': 255.831, 'eval_steps_per_second': 32.127, 'epoch': 4.0, 'step': 2144}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5e-06, 'epoch': 5.0, 'step': 2680}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9158, 'eval_samples_per_second': 255.754, 'eval_steps_per_second': 32.117, 'epoch': 5.0, 'step': 2680}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.000000000000001e-06, 'epoch': 6.0, 'step': 3216}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9177, 'eval_samples_per_second': 255.674, 'eval_steps_per_second': 32.107, 'epoch': 6.0, 'step': 3216}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3e-06, 'epoch': 7.0, 'step': 3752}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9224, 'eval_samples_per_second': 255.471, 'eval_steps_per_second': 32.082, 'epoch': 7.0, 'step': 3752}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.0000000000000003e-06, 'epoch': 8.0, 'step': 4288}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9277, 'eval_samples_per_second': 255.242, 'eval_steps_per_second': 32.053, 'epoch': 8.0, 'step': 4288}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.0000000000000002e-06, 'epoch': 9.0, 'step': 4824}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9402, 'eval_samples_per_second': 254.705, 'eval_steps_per_second': 31.985, 'epoch': 9.0, 'step': 4824}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0, 'epoch': 10.0, 'step': 5360}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 7.5448, 'eval_samples_per_second': 200.536, 'eval_steps_per_second': 25.183, 'epoch': 10.0, 'step': 5360}, {'train_runtime': 1082.2889, 'train_samples_per_second': 79.184, 'train_steps_per_second': 4.952, 'total_flos': 8513064963576888.0, 'train_loss': 0.0, 'epoch': 10.0, 'step': 5360}]
+
+Evaluation, ltg/norbert3-large
+***** predict metrics *****
+  predict_accuracy           =     0.9679
+  predict_f1                 =        0.0
+  predict_loss               =        nan
+  predict_precision          =        0.0
+  predict_recall             =        0.0
+  predict_runtime            = 0:00:06.87
+  predict_samples_per_second =    182.172
+  predict_steps_per_second   =     22.844
+Train and save best epoch to /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_04.json completed. F1: 0.0
+/cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_14.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_14.json
+03081014_elsa-intensity_NorBERT_3_large Our label2id: {'O': 0, 'B-Negative_Slight': 1, 'I-Negative_Slight': 2, 'B-Negative_Standard': 3, 'I-Negative_Standard': 4, 'B-Neutral': 5, 'I-Neutral': 6, 'B-Positive_Slight': 7, 'I-Positive_Slight': 8, 'B-Positive_Standard': 9, 'I-Positive_Standard': 10}
+Running tokenizer on train dataset:   0%|          | 0/8570 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:  12%|█▏        | 1000/8570 [00:00<00:02, 3565.93 examples/s]Running tokenizer on train dataset:  23%|██▎       | 2000/8570 [00:00<00:01, 3474.36 examples/s]Running tokenizer on train dataset:  35%|███▌      | 3000/8570 [00:00<00:01, 3647.36 examples/s]Running tokenizer on train dataset:  47%|████▋     | 4000/8570 [00:01<00:01, 4164.23 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8570 [00:01<00:00, 4912.11 examples/s]Running tokenizer on train dataset:  70%|███████   | 6000/8570 [00:01<00:00, 5580.01 examples/s]Running tokenizer on train dataset:  82%|████████▏ | 7000/8570 [00:01<00:00, 5990.43 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 8000/8570 [00:01<00:00, 6418.67 examples/s]Running tokenizer on train dataset: 100%|██████████| 8570/8570 [00:01<00:00, 4314.72 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/1513 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  66%|██████▌   | 1000/1513 [00:00<00:00, 6573.29 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1513/1513 [00:00<00:00, 2535.46 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/1252 [00:00<?, ? examples/s]Running tokenizer on test dataset:  80%|███████▉  | 1000/1252 [00:00<00:00, 3688.60 examples/s]Running tokenizer on test dataset: 100%|██████████| 1252/1252 [00:00<00:00, 2321.58 examples/s]
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Checkpoint destination directory /cluster/work/users/egilron/finetunes/03081014_elsa-intensity_NorBERT_3_large/checkpoint-536 already exists and is non-empty. Saving will proceed but saved results may be invalid.
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+03081014_elsa-intensity_NorBERT_3_large Ready to train. Train dataset labels are now: ['sent_id', 'tokens', 'elsa_labels', 'entity', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 9e-06, 'epoch': 1.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.2749, 'eval_samples_per_second': 241.118, 'eval_steps_per_second': 30.279, 'epoch': 1.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 8.000000000000001e-06, 'epoch': 2.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.634, 'eval_samples_per_second': 228.068, 'eval_steps_per_second': 28.64, 'epoch': 2.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 7e-06, 'epoch': 3.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.1597, 'eval_samples_per_second': 245.63, 'eval_steps_per_second': 30.846, 'epoch': 3.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 6e-06, 'epoch': 4.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9568, 'eval_samples_per_second': 253.996, 'eval_steps_per_second': 31.896, 'epoch': 4.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5e-06, 'epoch': 5.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.911, 'eval_samples_per_second': 255.964, 'eval_steps_per_second': 32.144, 'epoch': 5.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.000000000000001e-06, 'epoch': 6.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9341, 'eval_samples_per_second': 254.967, 'eval_steps_per_second': 32.018, 'epoch': 6.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3e-06, 'epoch': 7.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8875, 'eval_samples_per_second': 256.984, 'eval_steps_per_second': 32.272, 'epoch': 7.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.0000000000000003e-06, 'epoch': 8.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8796, 'eval_samples_per_second': 257.329, 'eval_steps_per_second': 32.315, 'epoch': 8.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.0000000000000002e-06, 'epoch': 9.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9085, 'eval_samples_per_second': 256.071, 'eval_steps_per_second': 32.157, 'epoch': 9.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0, 'epoch': 10.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9533, 'eval_samples_per_second': 254.144, 'eval_steps_per_second': 31.915, 'epoch': 10.0}
+{'train_runtime': 991.3698, 'train_samples_per_second': 86.446, 'train_steps_per_second': 2.703, 'train_loss': 0.0, 'epoch': 10.0}
+***** train metrics *****
+  epoch                    =       10.0
+  train_loss               =        0.0
+  train_runtime            = 0:16:31.36
+  train_samples            =       8570
+  train_samples_per_second =     86.446
+  train_steps_per_second   =      2.703
+[{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 9e-06, 'epoch': 1.0, 'step': 268}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.2749, 'eval_samples_per_second': 241.118, 'eval_steps_per_second': 30.279, 'epoch': 1.0, 'step': 268}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 8.000000000000001e-06, 'epoch': 2.0, 'step': 536}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.634, 'eval_samples_per_second': 228.068, 'eval_steps_per_second': 28.64, 'epoch': 2.0, 'step': 536}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 7e-06, 'epoch': 3.0, 'step': 804}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.1597, 'eval_samples_per_second': 245.63, 'eval_steps_per_second': 30.846, 'epoch': 3.0, 'step': 804}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 6e-06, 'epoch': 4.0, 'step': 1072}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9568, 'eval_samples_per_second': 253.996, 'eval_steps_per_second': 31.896, 'epoch': 4.0, 'step': 1072}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5e-06, 'epoch': 5.0, 'step': 1340}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.911, 'eval_samples_per_second': 255.964, 'eval_steps_per_second': 32.144, 'epoch': 5.0, 'step': 1340}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.000000000000001e-06, 'epoch': 6.0, 'step': 1608}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9341, 'eval_samples_per_second': 254.967, 'eval_steps_per_second': 32.018, 'epoch': 6.0, 'step': 1608}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3e-06, 'epoch': 7.0, 'step': 1876}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8875, 'eval_samples_per_second': 256.984, 'eval_steps_per_second': 32.272, 'epoch': 7.0, 'step': 1876}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.0000000000000003e-06, 'epoch': 8.0, 'step': 2144}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8796, 'eval_samples_per_second': 257.329, 'eval_steps_per_second': 32.315, 'epoch': 8.0, 'step': 2144}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.0000000000000002e-06, 'epoch': 9.0, 'step': 2412}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9085, 'eval_samples_per_second': 256.071, 'eval_steps_per_second': 32.157, 'epoch': 9.0, 'step': 2412}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0, 'epoch': 10.0, 'step': 2680}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9533, 'eval_samples_per_second': 254.144, 'eval_steps_per_second': 31.915, 'epoch': 10.0, 'step': 2680}, {'train_runtime': 991.3698, 'train_samples_per_second': 86.446, 'train_steps_per_second': 2.703, 'total_flos': 9830804905506156.0, 'train_loss': 0.0, 'epoch': 10.0, 'step': 2680}]
+
+Evaluation, ltg/norbert3-large
+***** predict metrics *****
+  predict_accuracy           =     0.9679
+  predict_f1                 =        0.0
+  predict_loss               =        nan
+  predict_precision          =        0.0
+  predict_recall             =        0.0
+  predict_runtime            = 0:00:05.92
+  predict_samples_per_second =    211.384
+  predict_steps_per_second   =     26.507
+Train and save best epoch to /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_14.json completed. F1: 0.0
+/cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_09.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_09.json
+03081014_elsa-intensity_NorBERT_3_large Our label2id: {'O': 0, 'B-Negative_Slight': 1, 'I-Negative_Slight': 2, 'B-Negative_Standard': 3, 'I-Negative_Standard': 4, 'B-Neutral': 5, 'I-Neutral': 6, 'B-Positive_Slight': 7, 'I-Positive_Slight': 8, 'B-Positive_Standard': 9, 'I-Positive_Standard': 10}
+Running tokenizer on train dataset:   0%|          | 0/8570 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:  12%|█▏        | 1000/8570 [00:00<00:01, 4965.72 examples/s]Running tokenizer on train dataset:  23%|██▎       | 2000/8570 [00:00<00:01, 6370.56 examples/s]Running tokenizer on train dataset:  35%|███▌      | 3000/8570 [00:00<00:00, 7021.73 examples/s]Running tokenizer on train dataset:  47%|████▋     | 4000/8570 [00:00<00:00, 7198.92 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8570 [00:00<00:00, 7260.43 examples/s]Running tokenizer on train dataset:  70%|███████   | 6000/8570 [00:00<00:00, 7392.00 examples/s]Running tokenizer on train dataset:  82%|████████▏ | 7000/8570 [00:00<00:00, 7310.63 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 8000/8570 [00:01<00:00, 7444.99 examples/s]Running tokenizer on train dataset: 100%|██████████| 8570/8570 [00:01<00:00, 6931.71 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/1513 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  66%|██████▌   | 1000/1513 [00:00<00:00, 7341.56 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1513/1513 [00:00<00:00, 4818.11 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/1252 [00:00<?, ? examples/s]Running tokenizer on test dataset:  80%|███████▉  | 1000/1252 [00:00<00:00, 4355.89 examples/s]Running tokenizer on test dataset: 100%|██████████| 1252/1252 [00:00<00:00, 3208.72 examples/s]
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+03081014_elsa-intensity_NorBERT_3_large Ready to train. Train dataset labels are now: ['sent_id', 'tokens', 'elsa_labels', 'entity', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+{'loss': 0.1758, 'grad_norm': 0.2539548873901367, 'learning_rate': 4.5e-05, 'epoch': 1.0}
+{'eval_loss': 0.06131156533956528, 'eval_precision': 0.5825825825825826, 'eval_recall': 0.6247987117552335, 'eval_f1': 0.6029526029526029, 'eval_accuracy': 0.9823738617266581, 'eval_runtime': 5.8879, 'eval_samples_per_second': 256.967, 'eval_steps_per_second': 32.269, 'epoch': 1.0}
+{'loss': 0.0431, 'grad_norm': 0.38523754477500916, 'learning_rate': 4e-05, 'epoch': 2.0}
+{'eval_loss': 0.04909886047244072, 'eval_precision': 0.6527131782945736, 'eval_recall': 0.677938808373591, 'eval_f1': 0.665086887835703, 'eval_accuracy': 0.9869464962676359, 'eval_runtime': 5.9462, 'eval_samples_per_second': 254.449, 'eval_steps_per_second': 31.953, 'epoch': 2.0}
+{'loss': 0.029, 'grad_norm': 0.058980949223041534, 'learning_rate': 3.5e-05, 'epoch': 3.0}
+{'eval_loss': 0.05063975974917412, 'eval_precision': 0.683641975308642, 'eval_recall': 0.7133655394524959, 'eval_f1': 0.698187549251379, 'eval_accuracy': 0.9874154844256849, 'eval_runtime': 5.862, 'eval_samples_per_second': 258.105, 'eval_steps_per_second': 32.412, 'epoch': 3.0}
+{'loss': 0.0195, 'grad_norm': 0.5020813941955566, 'learning_rate': 3e-05, 'epoch': 4.0}
+{'eval_loss': 0.05433474853634834, 'eval_precision': 0.6597325408618128, 'eval_recall': 0.714975845410628, 'eval_f1': 0.6862442040185471, 'eval_accuracy': 0.9871028256536523, 'eval_runtime': 5.863, 'eval_samples_per_second': 258.059, 'eval_steps_per_second': 32.407, 'epoch': 4.0}
+{'loss': 0.0133, 'grad_norm': 0.35998645424842834, 'learning_rate': 2.5e-05, 'epoch': 5.0}
+{'eval_loss': 0.058302026242017746, 'eval_precision': 0.6925515055467512, 'eval_recall': 0.7037037037037037, 'eval_f1': 0.6980830670926518, 'eval_accuracy': 0.9877281431977176, 'eval_runtime': 5.857, 'eval_samples_per_second': 258.324, 'eval_steps_per_second': 32.44, 'epoch': 5.0}
+{'loss': 0.0089, 'grad_norm': 1.2778503894805908, 'learning_rate': 2e-05, 'epoch': 6.0}
+{'eval_loss': 0.06512020528316498, 'eval_precision': 0.673374613003096, 'eval_recall': 0.7004830917874396, 'eval_f1': 0.6866614048934491, 'eval_accuracy': 0.9873764020791809, 'eval_runtime': 5.8484, 'eval_samples_per_second': 258.702, 'eval_steps_per_second': 32.487, 'epoch': 6.0}
+{'loss': 0.0069, 'grad_norm': 0.11705800145864487, 'learning_rate': 1.5e-05, 'epoch': 7.0}
+{'eval_loss': 0.07182268798351288, 'eval_precision': 0.6371951219512195, 'eval_recall': 0.6731078904991948, 'eval_f1': 0.6546593578700078, 'eval_accuracy': 0.9864384257630828, 'eval_runtime': 5.8629, 'eval_samples_per_second': 258.065, 'eval_steps_per_second': 32.407, 'epoch': 7.0}
+{'loss': 0.0059, 'grad_norm': 0.2528396248817444, 'learning_rate': 1e-05, 'epoch': 8.0}
+{'eval_loss': 0.07207829505205154, 'eval_precision': 0.6344725111441307, 'eval_recall': 0.6876006441223832, 'eval_f1': 0.6599690880989181, 'eval_accuracy': 0.9863602610700747, 'eval_runtime': 5.886, 'eval_samples_per_second': 257.052, 'eval_steps_per_second': 32.28, 'epoch': 8.0}
+{'loss': 0.0053, 'grad_norm': 0.16730210185050964, 'learning_rate': 5e-06, 'epoch': 9.0}
+{'eval_loss': 0.0716845914721489, 'eval_precision': 0.6216216216216216, 'eval_recall': 0.6666666666666666, 'eval_f1': 0.6433566433566433, 'eval_accuracy': 0.9860085199515379, 'eval_runtime': 5.8996, 'eval_samples_per_second': 256.459, 'eval_steps_per_second': 32.206, 'epoch': 9.0}
+{'loss': 0.0045, 'grad_norm': 0.2664729058742523, 'learning_rate': 0.0, 'epoch': 10.0}
+{'eval_loss': 0.07227293401956558, 'eval_precision': 0.6310240963855421, 'eval_recall': 0.6747181964573269, 'eval_f1': 0.6521400778210117, 'eval_accuracy': 0.9863602610700747, 'eval_runtime': 6.0226, 'eval_samples_per_second': 251.219, 'eval_steps_per_second': 31.548, 'epoch': 10.0}
+{'train_runtime': 1032.7011, 'train_samples_per_second': 82.986, 'train_steps_per_second': 5.19, 'train_loss': 0.03119937733038148, 'epoch': 10.0}
+***** train metrics *****
+  epoch                    =       10.0
+  train_loss               =     0.0312
+  train_runtime            = 0:17:12.70
+  train_samples            =       8570
+  train_samples_per_second =     82.986
+  train_steps_per_second   =       5.19
+[{'loss': 0.1758, 'grad_norm': 0.2539548873901367, 'learning_rate': 4.5e-05, 'epoch': 1.0, 'step': 536}, {'eval_loss': 0.06131156533956528, 'eval_precision': 0.5825825825825826, 'eval_recall': 0.6247987117552335, 'eval_f1': 0.6029526029526029, 'eval_accuracy': 0.9823738617266581, 'eval_runtime': 5.8879, 'eval_samples_per_second': 256.967, 'eval_steps_per_second': 32.269, 'epoch': 1.0, 'step': 536}, {'loss': 0.0431, 'grad_norm': 0.38523754477500916, 'learning_rate': 4e-05, 'epoch': 2.0, 'step': 1072}, {'eval_loss': 0.04909886047244072, 'eval_precision': 0.6527131782945736, 'eval_recall': 0.677938808373591, 'eval_f1': 0.665086887835703, 'eval_accuracy': 0.9869464962676359, 'eval_runtime': 5.9462, 'eval_samples_per_second': 254.449, 'eval_steps_per_second': 31.953, 'epoch': 2.0, 'step': 1072}, {'loss': 0.029, 'grad_norm': 0.058980949223041534, 'learning_rate': 3.5e-05, 'epoch': 3.0, 'step': 1608}, {'eval_loss': 0.05063975974917412, 'eval_precision': 0.683641975308642, 'eval_recall': 0.7133655394524959, 'eval_f1': 0.698187549251379, 'eval_accuracy': 0.9874154844256849, 'eval_runtime': 5.862, 'eval_samples_per_second': 258.105, 'eval_steps_per_second': 32.412, 'epoch': 3.0, 'step': 1608}, {'loss': 0.0195, 'grad_norm': 0.5020813941955566, 'learning_rate': 3e-05, 'epoch': 4.0, 'step': 2144}, {'eval_loss': 0.05433474853634834, 'eval_precision': 0.6597325408618128, 'eval_recall': 0.714975845410628, 'eval_f1': 0.6862442040185471, 'eval_accuracy': 0.9871028256536523, 'eval_runtime': 5.863, 'eval_samples_per_second': 258.059, 'eval_steps_per_second': 32.407, 'epoch': 4.0, 'step': 2144}, {'loss': 0.0133, 'grad_norm': 0.35998645424842834, 'learning_rate': 2.5e-05, 'epoch': 5.0, 'step': 2680}, {'eval_loss': 0.058302026242017746, 'eval_precision': 0.6925515055467512, 'eval_recall': 0.7037037037037037, 'eval_f1': 0.6980830670926518, 'eval_accuracy': 0.9877281431977176, 'eval_runtime': 5.857, 'eval_samples_per_second': 258.324, 'eval_steps_per_second': 32.44, 'epoch': 5.0, 'step': 2680}, {'loss': 0.0089, 'grad_norm': 1.2778503894805908, 'learning_rate': 2e-05, 'epoch': 6.0, 'step': 3216}, {'eval_loss': 0.06512020528316498, 'eval_precision': 0.673374613003096, 'eval_recall': 0.7004830917874396, 'eval_f1': 0.6866614048934491, 'eval_accuracy': 0.9873764020791809, 'eval_runtime': 5.8484, 'eval_samples_per_second': 258.702, 'eval_steps_per_second': 32.487, 'epoch': 6.0, 'step': 3216}, {'loss': 0.0069, 'grad_norm': 0.11705800145864487, 'learning_rate': 1.5e-05, 'epoch': 7.0, 'step': 3752}, {'eval_loss': 0.07182268798351288, 'eval_precision': 0.6371951219512195, 'eval_recall': 0.6731078904991948, 'eval_f1': 0.6546593578700078, 'eval_accuracy': 0.9864384257630828, 'eval_runtime': 5.8629, 'eval_samples_per_second': 258.065, 'eval_steps_per_second': 32.407, 'epoch': 7.0, 'step': 3752}, {'loss': 0.0059, 'grad_norm': 0.2528396248817444, 'learning_rate': 1e-05, 'epoch': 8.0, 'step': 4288}, {'eval_loss': 0.07207829505205154, 'eval_precision': 0.6344725111441307, 'eval_recall': 0.6876006441223832, 'eval_f1': 0.6599690880989181, 'eval_accuracy': 0.9863602610700747, 'eval_runtime': 5.886, 'eval_samples_per_second': 257.052, 'eval_steps_per_second': 32.28, 'epoch': 8.0, 'step': 4288}, {'loss': 0.0053, 'grad_norm': 0.16730210185050964, 'learning_rate': 5e-06, 'epoch': 9.0, 'step': 4824}, {'eval_loss': 0.0716845914721489, 'eval_precision': 0.6216216216216216, 'eval_recall': 0.6666666666666666, 'eval_f1': 0.6433566433566433, 'eval_accuracy': 0.9860085199515379, 'eval_runtime': 5.8996, 'eval_samples_per_second': 256.459, 'eval_steps_per_second': 32.206, 'epoch': 9.0, 'step': 4824}, {'loss': 0.0045, 'grad_norm': 0.2664729058742523, 'learning_rate': 0.0, 'epoch': 10.0, 'step': 5360}, {'eval_loss': 0.07227293401956558, 'eval_precision': 0.6310240963855421, 'eval_recall': 0.6747181964573269, 'eval_f1': 0.6521400778210117, 'eval_accuracy': 0.9863602610700747, 'eval_runtime': 6.0226, 'eval_samples_per_second': 251.219, 'eval_steps_per_second': 31.548, 'epoch': 10.0, 'step': 5360}, {'train_runtime': 1032.7011, 'train_samples_per_second': 82.986, 'train_steps_per_second': 5.19, 'total_flos': 8513064963576888.0, 'train_loss': 0.03119937733038148, 'epoch': 10.0, 'step': 5360}]
+
+Evaluation, ltg/norbert3-large
+***** predict metrics *****
+  predict_accuracy           =     0.9883
+  predict_f1                 =     0.6818
+  predict_loss               =     0.0397
+  predict_precision          =     0.6731
+  predict_recall             =     0.6908
+  predict_runtime            = 0:00:04.92
+  predict_samples_per_second =    254.255
+  predict_steps_per_second   =     31.883
+Train and save best epoch to /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_09.json completed. F1: 0.6818181818181819
+/cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_24.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_24.json
+03081014_elsa-intensity_NorBERT_3_large_24.json seems to be completed. Exiting
+/cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_19.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_19.json
+03081014_elsa-intensity_NorBERT_3_large Our label2id: {'O': 0, 'B-Negative_Slight': 1, 'I-Negative_Slight': 2, 'B-Negative_Standard': 3, 'I-Negative_Standard': 4, 'B-Neutral': 5, 'I-Neutral': 6, 'B-Positive_Slight': 7, 'I-Positive_Slight': 8, 'B-Positive_Standard': 9, 'I-Positive_Standard': 10}
+Running tokenizer on train dataset:   0%|          | 0/8570 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:  12%|█▏        | 1000/8570 [00:00<00:01, 4049.15 examples/s]Running tokenizer on train dataset:  23%|██▎       | 2000/8570 [00:00<00:01, 5728.75 examples/s]Running tokenizer on train dataset:  35%|███▌      | 3000/8570 [00:00<00:00, 6179.65 examples/s]Running tokenizer on train dataset:  47%|████▋     | 4000/8570 [00:00<00:00, 5702.79 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8570 [00:00<00:00, 6230.18 examples/s]Running tokenizer on train dataset:  70%|███████   | 6000/8570 [00:00<00:00, 6716.16 examples/s]Running tokenizer on train dataset:  82%|████████▏ | 7000/8570 [00:01<00:00, 6893.77 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 8000/8570 [00:01<00:00, 7161.18 examples/s]Running tokenizer on train dataset: 100%|██████████| 8570/8570 [00:01<00:00, 5903.14 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/1513 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  66%|██████▌   | 1000/1513 [00:00<00:00, 7451.80 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1513/1513 [00:00<00:00, 4603.83 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/1252 [00:00<?, ? examples/s]Running tokenizer on test dataset:  80%|███████▉  | 1000/1252 [00:00<00:00, 4022.07 examples/s]Running tokenizer on test dataset: 100%|██████████| 1252/1252 [00:00<00:00, 2787.37 examples/s]
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Checkpoint destination directory /cluster/work/users/egilron/finetunes/03081014_elsa-intensity_NorBERT_3_large/checkpoint-1072 already exists and is non-empty. Saving will proceed but saved results may be invalid.
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/seqeval/metrics/v1.py:57: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+03081014_elsa-intensity_NorBERT_3_large Ready to train. Train dataset labels are now: ['sent_id', 'tokens', 'elsa_labels', 'entity', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.5e-05, 'epoch': 1.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9488, 'eval_samples_per_second': 254.337, 'eval_steps_per_second': 31.939, 'epoch': 1.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4e-05, 'epoch': 2.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9072, 'eval_samples_per_second': 256.129, 'eval_steps_per_second': 32.164, 'epoch': 2.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3.5e-05, 'epoch': 3.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8849, 'eval_samples_per_second': 257.1, 'eval_steps_per_second': 32.286, 'epoch': 3.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3e-05, 'epoch': 4.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.985, 'eval_samples_per_second': 252.797, 'eval_steps_per_second': 31.746, 'epoch': 4.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.5e-05, 'epoch': 5.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8908, 'eval_samples_per_second': 256.841, 'eval_steps_per_second': 32.254, 'epoch': 5.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2e-05, 'epoch': 6.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9402, 'eval_samples_per_second': 254.703, 'eval_steps_per_second': 31.985, 'epoch': 6.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.5e-05, 'epoch': 7.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.7778, 'eval_samples_per_second': 223.228, 'eval_steps_per_second': 28.033, 'epoch': 7.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1e-05, 'epoch': 8.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8655, 'eval_samples_per_second': 257.949, 'eval_steps_per_second': 32.393, 'epoch': 8.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5e-06, 'epoch': 9.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8682, 'eval_samples_per_second': 257.832, 'eval_steps_per_second': 32.378, 'epoch': 9.0}
+{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0, 'epoch': 10.0}
+{'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9183, 'eval_samples_per_second': 255.649, 'eval_steps_per_second': 32.104, 'epoch': 10.0}
+{'train_runtime': 997.2396, 'train_samples_per_second': 85.937, 'train_steps_per_second': 2.687, 'train_loss': 0.0, 'epoch': 10.0}
+***** train metrics *****
+  epoch                    =       10.0
+  train_loss               =        0.0
+  train_runtime            = 0:16:37.23
+  train_samples            =       8570
+  train_samples_per_second =     85.937
+  train_steps_per_second   =      2.687
+[{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.5e-05, 'epoch': 1.0, 'step': 268}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9488, 'eval_samples_per_second': 254.337, 'eval_steps_per_second': 31.939, 'epoch': 1.0, 'step': 268}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4e-05, 'epoch': 2.0, 'step': 536}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9072, 'eval_samples_per_second': 256.129, 'eval_steps_per_second': 32.164, 'epoch': 2.0, 'step': 536}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3.5e-05, 'epoch': 3.0, 'step': 804}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8849, 'eval_samples_per_second': 257.1, 'eval_steps_per_second': 32.286, 'epoch': 3.0, 'step': 804}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 3e-05, 'epoch': 4.0, 'step': 1072}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.985, 'eval_samples_per_second': 252.797, 'eval_steps_per_second': 31.746, 'epoch': 4.0, 'step': 1072}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2.5e-05, 'epoch': 5.0, 'step': 1340}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8908, 'eval_samples_per_second': 256.841, 'eval_steps_per_second': 32.254, 'epoch': 5.0, 'step': 1340}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 2e-05, 'epoch': 6.0, 'step': 1608}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9402, 'eval_samples_per_second': 254.703, 'eval_steps_per_second': 31.985, 'epoch': 6.0, 'step': 1608}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1.5e-05, 'epoch': 7.0, 'step': 1876}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 6.7778, 'eval_samples_per_second': 223.228, 'eval_steps_per_second': 28.033, 'epoch': 7.0, 'step': 1876}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 1e-05, 'epoch': 8.0, 'step': 2144}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8655, 'eval_samples_per_second': 257.949, 'eval_steps_per_second': 32.393, 'epoch': 8.0, 'step': 2144}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 5e-06, 'epoch': 9.0, 'step': 2412}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.8682, 'eval_samples_per_second': 257.832, 'eval_steps_per_second': 32.378, 'epoch': 9.0, 'step': 2412}, {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 0.0, 'epoch': 10.0, 'step': 2680}, {'eval_loss': nan, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_accuracy': 0.9625200297025833, 'eval_runtime': 5.9183, 'eval_samples_per_second': 255.649, 'eval_steps_per_second': 32.104, 'epoch': 10.0, 'step': 2680}, {'train_runtime': 997.2396, 'train_samples_per_second': 85.937, 'train_steps_per_second': 2.687, 'total_flos': 9830804905506156.0, 'train_loss': 0.0, 'epoch': 10.0, 'step': 2680}]
+
+Evaluation, ltg/norbert3-large
+***** predict metrics *****
+  predict_accuracy           =     0.9679
+  predict_f1                 =        0.0
+  predict_loss               =        nan
+  predict_precision          =        0.0
+  predict_recall             =        0.0
+  predict_runtime            = 0:00:04.96
+  predict_samples_per_second =    251.912
+  predict_steps_per_second   =      31.59
+Train and save best epoch to /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_19.json completed. F1: 0.0
+
+Job 10901754 consumed 10.1 billing hours from project nn9851k.
+
+Submitted 2024-03-08T11:05:25; waited 25.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 4.0 hours
+Elapsed wallclock time:   1.3 hours
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+10901754           1            0.0 %  2024-03-08T11:05:50    1.3 h  0
+10901754.batch     1      1    86.6 %  2024-03-08T11:05:50    1.3 h  0
+
+Used CPU time:   1.1 CPU hours
+Unused CPU time: 10.2 CPU minutes
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+10901754          24.0        
+10901754.batch    24.0     4.8
+
+GPU usage stats:
+Job 10901754 completed at Fri Mar 8 12:21:56 CET 2024

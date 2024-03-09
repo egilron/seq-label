@@ -1,0 +1,71 @@
+Starting job 10900656 on c7-8 on saga at Fri Mar 8 10:16:03 CET 2024
+
+/cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_29.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03081014_elsa-intensity_NorBERT_3_large_29.json
+03081014_elsa-intensity_NorBERT_3_large Our label2id: {'O': 0, 'B-Negative_Slight': 1, 'I-Negative_Slight': 2, 'B-Negative_Standard': 3, 'I-Negative_Standard': 4, 'B-Neutral': 5, 'I-Neutral': 6, 'B-Positive_Slight': 7, 'I-Positive_Slight': 8, 'B-Positive_Standard': 9, 'I-Positive_Standard': 10}
+Running tokenizer on train dataset:   0%|          | 0/8570 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:  12%|█▏        | 1000/8570 [00:00<00:02, 2543.80 examples/s]Running tokenizer on train dataset:  23%|██▎       | 2000/8570 [00:00<00:02, 2371.86 examples/s]Running tokenizer on train dataset:  35%|███▌      | 3000/8570 [00:01<00:02, 2576.26 examples/s]Running tokenizer on train dataset:  47%|████▋     | 4000/8570 [00:01<00:01, 2530.54 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 5000/8570 [00:01<00:01, 2662.56 examples/s]Running tokenizer on train dataset:  70%|███████   | 6000/8570 [00:02<00:00, 2791.62 examples/s]Running tokenizer on train dataset:  82%|████████▏ | 7000/8570 [00:02<00:00, 2808.38 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 8000/8570 [00:02<00:00, 2887.54 examples/s]Running tokenizer on train dataset: 100%|██████████| 8570/8570 [00:03<00:00, 2912.60 examples/s]Running tokenizer on train dataset: 100%|██████████| 8570/8570 [00:03<00:00, 2737.60 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/1513 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  66%|██████▌   | 1000/1513 [00:00<00:00, 2930.64 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1513/1513 [00:00<00:00, 2999.52 examples/s]Running tokenizer on validation dataset: 100%|██████████| 1513/1513 [00:00<00:00, 2131.40 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/1252 [00:00<?, ? examples/s]Running tokenizer on test dataset:  80%|███████▉  | 1000/1252 [00:00<00:00, 2927.83 examples/s]Running tokenizer on test dataset: 100%|██████████| 1252/1252 [00:00<00:00, 2274.81 examples/s]
+03081014_elsa-intensity_NorBERT_3_large Ready to train. Train dataset labels are now: ['sent_id', 'tokens', 'elsa_labels', 'entity', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+Traceback (most recent call last):
+  File "/cluster/work/users/egilron/seq-label_github/seq_label.py", line 276, in <module>
+    train_result = trainer.train(resume_from_checkpoint=False)
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 1624, in train
+    return inner_training_loop(
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 1961, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 2902, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 2925, in compute_loss
+    outputs = model(**inputs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/seq-label_github/modeling_norbert.py", line 503, in forward
+    sequence_output, contextualized_embeddings, attention_probs = self.get_contextualized_embeddings(input_ids, attention_mask)
+  File "/cluster/work/users/egilron/seq-label_github/modeling_norbert.py", line 311, in get_contextualized_embeddings
+    contextualized_embeddings, attention_probs = self.transformer(static_embeddings, attention_mask, relative_embedding)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/seq-label_github/modeling_norbert.py", line 43, in forward
+    hidden_state, attention_p = layer(hidden_states[-1], attention_mask, relative_embedding)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/seq-label_github/modeling_norbert.py", line 85, in forward
+    attention_output, attention_probs = self.attention(x, padding_mask, relative_embedding)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/seq-label_github/modeling_norbert.py", line 229, in forward
+    attention_scores, value = self.compute_attention_scores(hidden_states, relative_embedding)
+  File "/cluster/work/users/egilron/seq-label_github/modeling_norbert.py", line 197, in compute_attention_scores
+    query, key = self.in_proj_qk(hidden_states).chunk(2, dim=2)  # shape: [T, B, D]
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 46.00 MiB. GPU 0 has a total capacty of 15.89 GiB of which 34.12 MiB is free. Including non-PyTorch memory, this process has 15.86 GiB memory in use. Of the allocated memory 14.78 GiB is allocated by PyTorch, and 419.46 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+
+GPU usage stats:
+Job 10900656 completed at Fri Mar 8 10:18:48 CET 2024
