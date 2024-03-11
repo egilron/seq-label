@@ -1,1 +1,1 @@
-/fp/homes01/u01/ec-egilron/sqlabel-github/configs/fox/01191518_tsa-bin_NorBERT_3_large_37_c.json
+/cluster/work/users/egilron/seq-label_github/configs/saga/03091023_elsa-intensity_nb-bert_base_11_404.json
