@@ -205,10 +205,18 @@ completed = os.listdir("logs/jsons")
 # Parse from json file submitted as argument to the .py file
 # We should pass only one argument to the script and it's the path to a json file,
 if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
-    print("\n\n\n***Loading config file:", sys.argv[1])
-    config_path = Path(sys.argv[1]).resolve()
-    config_name = config_path.name # including .json
-    config_json = json.loads(config_path.read_text())
+    try:
+        print("\n\n\n***Loading config file:", sys.argv[1])
+        config_path = Path(sys.argv[1]).resolve()
+        config_name = config_path.name # including .json
+        config_json = json.loads(config_path.read_text())
+    except:
+        print("Maybe we are in an interctive session.")
+        config_path = input("Relative path to config file: ")
+        config_path = Path(config_path).resolve()
+        config_name = config_path.name # including .json
+        config_json = json.loads(config_path.read_text())
+
     args_dict = config_json["args_dict"]
     
 else:
@@ -243,8 +251,7 @@ else:
         ds_path = data_args.dataset_name
     dsd = load_dataset(ds_path.strip(),ds_version.strip() )
 
-# Define what remote code we will trust
-trust_remote = "norbert3" in model_args.model_name_or_path
+
 
 
 def get_label_list(labels):
@@ -268,7 +275,7 @@ config = AutoConfig.from_pretrained(
     cache_dir=model_args.cache_dir,
     revision=model_args.model_revision,
     use_auth_token=True if model_args.use_auth_token else None,
-    trust_remote_code=True
+    trust_remote_code=model_args.trust_remote_code,
 )
 tokenizer_name_or_path = model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path
 if config.model_type in {"gpt2", "roberta"}:
@@ -299,7 +306,7 @@ config=config,
 cache_dir=model_args.cache_dir,
 revision=model_args.model_revision,
 ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
-trust_remote_code=trust_remote,
+trust_remote_code=model_args.trust_remote_code,
 )
 
 
@@ -417,7 +424,7 @@ def compute_metrics(p):
             "accuracy": results["overall_accuracy"],
         }
 
-print("\nModel:", model_args.model_name_or_path, "Trust Remote code?", trust_remote)
+print("\nModel:", model_args.model_name_or_path, "Trust Remote code?", model_args.trust_remote_code)
 print(args_dict["task_name"],"\nReady to train. Train dataset labels are now:", train_dataset.column_names, "\n")
 trainer = Trainer(
     model=model,

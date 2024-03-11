@@ -135,3 +135,4 @@ output*.txt
 zips/
 logs/jsons/*.json.json
 ~/tsa_testing/
+.vscode

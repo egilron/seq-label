@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "Python Debugger: Python File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["configs/hp/02191505_tsa-bin_NorBERT_3_base_00.json"]
+        }
+    ]
+}

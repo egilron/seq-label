@@ -1,0 +1,72 @@
+{
+  "builder_name": "parquet",
+  "citation": "@inproceedings{johansen2019ner,\n  title={NorNE: Annotating Named Entities for Norwegian},\n  author={Fredrik J\u00f8rgensen, Tobias Aasmoe, Anne-Stine Ruud Husev\u00e5g,\n          Lilja \u00d8vrelid, and Erik Velldal},\n  booktitle={LREC 2020},\n  year={2020},\n  url={https://arxiv.org/abs/1911.12146}\n}\n",
+  "config_name": "combined",
+  "dataset_name": "norne",
+  "dataset_size": 25294430,
+  "description": "NorNE is a manually annotated\ncorpus of named entities which extends the annotation of the existing\nNorwegian Dependency Treebank. Comprising both of the official standards of\nwritten Norwegian (Bokm\u00e5l and Nynorsk), the corpus contains around 600,000\ntokens and annotates a rich set of entity types including persons,\norganizations, locations, geo-political entities, products, and events,\nin addition to a class corresponding to nominals derived from names.\n",
+  "download_checksums": {
+    "hf://datasets/norne@2603c393488c0b46316ba145e7be5c9a858c6c71/combined/train/0000.parquet": {
+      "num_bytes": 5690732,
+      "checksum": null
+    },
+    "hf://datasets/norne@2603c393488c0b46316ba145e7be5c9a858c6c71/combined/validation/0000.parquet": {
+      "num_bytes": 811551,
+      "checksum": null
+    },
+    "hf://datasets/norne@2603c393488c0b46316ba145e7be5c9a858c6c71/combined/test/0000.parquet": {
+      "num_bytes": 660642,
+      "checksum": null
+    }
+  },
+  "download_size": 7162925,
+  "features": {
+    "idx": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "tokens": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "ner_labels": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "https://github.com/ltgoslo/norne",
+  "license": "",
+  "size_in_bytes": 32457355,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 20226593,
+      "num_examples": 29870,
+      "dataset_name": "norne"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 2796593,
+      "num_examples": 4300,
+      "dataset_name": "norne"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 2271244,
+      "num_examples": 3450,
+      "dataset_name": "norne"
+    }
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
