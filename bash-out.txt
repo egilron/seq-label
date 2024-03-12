@@ -1,1 +1,1 @@
-/cluster/work/users/egilron/seq-label_github/configs/saga/03091023_elsa-intensity_nb-bert_base_11_404.json
+/cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_04_101.json

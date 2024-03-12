@@ -1,0 +1,151 @@
+Starting job 10917513 on c7-8 on saga at Mon Mar 11 12:19:26 CET 2024
+
+/cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_01_101.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Some weights of BertForTokenClassification were not initialized from the model checkpoint at NbAiLab/nb-bert-large and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_01_101.json
+03111215_ner2_nb-bert-large Our label2id: {'O': 0, 'B-ORG': 1, 'I-ORG': 2, 'B-PER': 3, 'I-PER': 4}
+Running tokenizer on train dataset:   0%|          | 0/29870 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:   3%|▎         | 1000/29870 [00:01<00:48, 599.82 examples/s]Running tokenizer on train dataset:   7%|▋         | 2000/29870 [00:02<00:27, 1017.72 examples/s]Running tokenizer on train dataset:  10%|█         | 3000/29870 [00:02<00:20, 1300.03 examples/s]Running tokenizer on train dataset:  13%|█▎        | 4000/29870 [00:03<00:16, 1608.73 examples/s]Running tokenizer on train dataset:  17%|█▋        | 5000/29870 [00:03<00:12, 1934.69 examples/s]Running tokenizer on train dataset:  20%|██        | 6000/29870 [00:03<00:10, 2264.14 examples/s]Running tokenizer on train dataset:  23%|██▎       | 7000/29870 [00:04<00:09, 2486.21 examples/s]Running tokenizer on train dataset:  27%|██▋       | 8000/29870 [00:04<00:07, 2780.64 examples/s]Running tokenizer on train dataset:  30%|███       | 9000/29870 [00:04<00:07, 2662.62 examples/s]Running tokenizer on train dataset:  33%|███▎      | 10000/29870 [00:04<00:06, 2862.22 examples/s]Running tokenizer on train dataset:  37%|███▋      | 11000/29870 [00:05<00:06, 3119.56 examples/s]Running tokenizer on train dataset:  40%|████      | 12000/29870 [00:05<00:05, 3194.01 examples/s]Running tokenizer on train dataset:  44%|████▎     | 13000/29870 [00:05<00:05, 3020.05 examples/s]Running tokenizer on train dataset:  47%|████▋     | 14000/29870 [00:06<00:05, 3075.00 examples/s]Running tokenizer on train dataset:  50%|█████     | 15000/29870 [00:06<00:05, 2970.07 examples/s]Running tokenizer on train dataset:  54%|█████▎    | 16000/29870 [00:06<00:04, 3051.18 examples/s]Running tokenizer on train dataset:  57%|█████▋    | 17000/29870 [00:07<00:04, 3070.06 examples/s]Running tokenizer on train dataset:  60%|██████    | 18000/29870 [00:07<00:03, 3051.53 examples/s]Running tokenizer on train dataset:  64%|██████▎   | 19000/29870 [00:07<00:03, 2931.80 examples/s]Running tokenizer on train dataset:  67%|██████▋   | 20000/29870 [00:08<00:03, 2955.51 examples/s]Running tokenizer on train dataset:  70%|███████   | 21000/29870 [00:08<00:02, 2958.61 examples/s]Running tokenizer on train dataset:  74%|███████▎  | 22000/29870 [00:09<00:02, 2673.77 examples/s]Running tokenizer on train dataset:  77%|███████▋  | 23000/29870 [00:09<00:02, 2850.22 examples/s]Running tokenizer on train dataset:  80%|████████  | 24000/29870 [00:09<00:02, 2919.56 examples/s]Running tokenizer on train dataset:  84%|████████▎ | 25000/29870 [00:10<00:01, 2867.06 examples/s]Running tokenizer on train dataset:  87%|████████▋ | 26000/29870 [00:10<00:01, 2814.80 examples/s]Running tokenizer on train dataset:  90%|█████████ | 27000/29870 [00:10<00:01, 2536.95 examples/s]Running tokenizer on train dataset:  94%|█████████▎| 28000/29870 [00:11<00:00, 2641.08 examples/s]Running tokenizer on train dataset:  97%|█████████▋| 29000/29870 [00:11<00:00, 2699.70 examples/s]Running tokenizer on train dataset: 100%|██████████| 29870/29870 [00:11<00:00, 2784.34 examples/s]Running tokenizer on train dataset: 100%|██████████| 29870/29870 [00:11<00:00, 2492.28 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/4300 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  23%|██▎       | 1000/4300 [00:00<00:01, 2994.20 examples/s]Running tokenizer on validation dataset:  47%|████▋     | 2000/4300 [00:00<00:00, 3095.93 examples/s]Running tokenizer on validation dataset:  70%|██████▉   | 3000/4300 [00:01<00:00, 2831.59 examples/s]Running tokenizer on validation dataset:  93%|█████████▎| 4000/4300 [00:01<00:00, 2849.35 examples/s]Running tokenizer on validation dataset: 100%|██████████| 4300/4300 [00:01<00:00, 2842.94 examples/s]Running tokenizer on validation dataset: 100%|██████████| 4300/4300 [00:01<00:00, 2757.08 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/3450 [00:00<?, ? examples/s]Running tokenizer on test dataset:  29%|██▉       | 1000/3450 [00:00<00:01, 2254.76 examples/s]Running tokenizer on test dataset:  58%|█████▊    | 2000/3450 [00:00<00:00, 2176.85 examples/s]Running tokenizer on test dataset:  87%|████████▋ | 3000/3450 [00:01<00:00, 2350.85 examples/s]Running tokenizer on test dataset: 100%|██████████| 3450/3450 [00:01<00:00, 2412.67 examples/s]Running tokenizer on test dataset: 100%|██████████| 3450/3450 [00:01<00:00, 2013.69 examples/s]
+03111215_ner2_nb-bert-large Ready to train. Train dataset labels are now: ['idx', 'tokens', 'ner_labels', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+{'loss': 0.0303, 'grad_norm': 1.0970228910446167, 'learning_rate': 9.166666666666666e-06, 'epoch': 1.0}
+{'eval_loss': 0.010194176807999611, 'eval_precision': 0.9453290870488322, 'eval_recall': 0.9368753287743293, 'eval_f1': 0.9410832232496698, 'eval_accuracy': 0.9965394341827001, 'eval_runtime': 26.7029, 'eval_samples_per_second': 161.031, 'eval_steps_per_second': 20.148, 'epoch': 1.0}
+{'loss': 0.0067, 'grad_norm': 0.064590685069561, 'learning_rate': 8.333333333333334e-06, 'epoch': 2.0}
+{'eval_loss': 0.010883821174502373, 'eval_precision': 0.9553042541733979, 'eval_recall': 0.9331930562861652, 'eval_f1': 0.9441192123469931, 'eval_accuracy': 0.9967612653248348, 'eval_runtime': 26.4982, 'eval_samples_per_second': 162.275, 'eval_steps_per_second': 20.303, 'epoch': 2.0}
+{'loss': 0.0033, 'grad_norm': 0.011430547572672367, 'learning_rate': 7.500000000000001e-06, 'epoch': 3.0}
+{'eval_loss': 0.011681335978209972, 'eval_precision': 0.9403526970954357, 'eval_recall': 0.9537085744345082, 'eval_f1': 0.946983546617916, 'eval_accuracy': 0.9968795752673065, 'eval_runtime': 26.4552, 'eval_samples_per_second': 162.539, 'eval_steps_per_second': 20.336, 'epoch': 3.0}
+{'loss': 0.0017, 'grad_norm': 0.14707748591899872, 'learning_rate': 6.666666666666667e-06, 'epoch': 4.0}
+{'eval_loss': 0.014618000015616417, 'eval_precision': 0.9409020217729394, 'eval_recall': 0.9547606522882693, 'eval_f1': 0.9477806788511749, 'eval_accuracy': 0.9968647865244975, 'eval_runtime': 26.4129, 'eval_samples_per_second': 162.799, 'eval_steps_per_second': 20.369, 'epoch': 4.0}
+{'loss': 0.0012, 'grad_norm': 0.22050532698631287, 'learning_rate': 5.833333333333334e-06, 'epoch': 5.0}
+{'eval_loss': 0.015889137983322144, 'eval_precision': 0.9554482018250134, 'eval_recall': 0.9363492898474487, 'eval_f1': 0.9458023379383634, 'eval_accuracy': 0.9967908428104527, 'eval_runtime': 26.443, 'eval_samples_per_second': 162.614, 'eval_steps_per_second': 20.346, 'epoch': 5.0}
+{'loss': 0.0007, 'grad_norm': 0.0029625622555613518, 'learning_rate': 5e-06, 'epoch': 6.0}
+{'eval_loss': 0.015546651557087898, 'eval_precision': 0.9523305084745762, 'eval_recall': 0.9458179905312993, 'eval_f1': 0.9490630773291105, 'eval_accuracy': 0.9969091527529245, 'eval_runtime': 26.3517, 'eval_samples_per_second': 163.177, 'eval_steps_per_second': 20.416, 'epoch': 6.0}
+{'loss': 0.0004, 'grad_norm': 0.001171112759038806, 'learning_rate': 4.166666666666667e-06, 'epoch': 7.0}
+{'eval_loss': 0.017168255522847176, 'eval_precision': 0.9482849604221636, 'eval_recall': 0.9452919516044187, 'eval_f1': 0.946786090621707, 'eval_accuracy': 0.9968647865244975, 'eval_runtime': 26.4131, 'eval_samples_per_second': 162.798, 'eval_steps_per_second': 20.369, 'epoch': 7.0}
+{'loss': 0.0003, 'grad_norm': 0.013070103712379932, 'learning_rate': 3.3333333333333333e-06, 'epoch': 8.0}
+{'eval_loss': 0.018616795539855957, 'eval_precision': 0.9407216494845361, 'eval_recall': 0.9600210415570752, 'eval_f1': 0.9502733663108566, 'eval_accuracy': 0.9969683077241603, 'eval_runtime': 26.3516, 'eval_samples_per_second': 163.178, 'eval_steps_per_second': 20.416, 'epoch': 8.0}
+{'loss': 0.0002, 'grad_norm': 0.0003130324766971171, 'learning_rate': 2.5e-06, 'epoch': 9.0}
+{'eval_loss': 0.01856151595711708, 'eval_precision': 0.9432882414151925, 'eval_recall': 0.9537085744345082, 'eval_f1': 0.9484697881245095, 'eval_accuracy': 0.9969683077241603, 'eval_runtime': 26.5063, 'eval_samples_per_second': 162.225, 'eval_steps_per_second': 20.297, 'epoch': 9.0}
+{'loss': 0.0001, 'grad_norm': 0.0007476788596250117, 'learning_rate': 1.6666666666666667e-06, 'epoch': 10.0}
+{'eval_loss': 0.019750073552131653, 'eval_precision': 0.9524564183835182, 'eval_recall': 0.9484481851657023, 'eval_f1': 0.9504480759093306, 'eval_accuracy': 0.9969978852097783, 'eval_runtime': 26.6919, 'eval_samples_per_second': 161.097, 'eval_steps_per_second': 20.156, 'epoch': 10.0}
+{'loss': 0.0001, 'grad_norm': 0.00022554465977009386, 'learning_rate': 8.333333333333333e-07, 'epoch': 11.0}
+{'eval_loss': 0.02116907201707363, 'eval_precision': 0.9410243145369891, 'eval_recall': 0.9568648079957917, 'eval_f1': 0.9488784559207093, 'eval_accuracy': 0.9969387302385424, 'eval_runtime': 26.4977, 'eval_samples_per_second': 162.278, 'eval_steps_per_second': 20.304, 'epoch': 11.0}
+{'loss': 0.0, 'grad_norm': 4.652605639421381e-05, 'learning_rate': 0.0, 'epoch': 12.0}
+{'eval_loss': 0.021516229957342148, 'eval_precision': 0.9428571428571428, 'eval_recall': 0.9547606522882693, 'eval_f1': 0.9487715629900679, 'eval_accuracy': 0.9969091527529245, 'eval_runtime': 26.3703, 'eval_samples_per_second': 163.062, 'eval_steps_per_second': 20.402, 'epoch': 12.0}
+{'train_runtime': 7061.0858, 'train_samples_per_second': 50.763, 'train_steps_per_second': 1.587, 'train_loss': 0.0037687913884277813, 'epoch': 12.0}
+***** train metrics *****
+  epoch                    =       12.0
+  train_loss               =     0.0038
+  train_runtime            = 1:57:41.08
+  train_samples            =      29870
+  train_samples_per_second =     50.763
+  train_steps_per_second   =      1.587
+[{'loss': 0.0303, 'grad_norm': 1.0970228910446167, 'learning_rate': 9.166666666666666e-06, 'epoch': 1.0, 'step': 934}, {'eval_loss': 0.010194176807999611, 'eval_precision': 0.9453290870488322, 'eval_recall': 0.9368753287743293, 'eval_f1': 0.9410832232496698, 'eval_accuracy': 0.9965394341827001, 'eval_runtime': 26.7029, 'eval_samples_per_second': 161.031, 'eval_steps_per_second': 20.148, 'epoch': 1.0, 'step': 934}, {'loss': 0.0067, 'grad_norm': 0.064590685069561, 'learning_rate': 8.333333333333334e-06, 'epoch': 2.0, 'step': 1868}, {'eval_loss': 0.010883821174502373, 'eval_precision': 0.9553042541733979, 'eval_recall': 0.9331930562861652, 'eval_f1': 0.9441192123469931, 'eval_accuracy': 0.9967612653248348, 'eval_runtime': 26.4982, 'eval_samples_per_second': 162.275, 'eval_steps_per_second': 20.303, 'epoch': 2.0, 'step': 1868}, {'loss': 0.0033, 'grad_norm': 0.011430547572672367, 'learning_rate': 7.500000000000001e-06, 'epoch': 3.0, 'step': 2802}, {'eval_loss': 0.011681335978209972, 'eval_precision': 0.9403526970954357, 'eval_recall': 0.9537085744345082, 'eval_f1': 0.946983546617916, 'eval_accuracy': 0.9968795752673065, 'eval_runtime': 26.4552, 'eval_samples_per_second': 162.539, 'eval_steps_per_second': 20.336, 'epoch': 3.0, 'step': 2802}, {'loss': 0.0017, 'grad_norm': 0.14707748591899872, 'learning_rate': 6.666666666666667e-06, 'epoch': 4.0, 'step': 3736}, {'eval_loss': 0.014618000015616417, 'eval_precision': 0.9409020217729394, 'eval_recall': 0.9547606522882693, 'eval_f1': 0.9477806788511749, 'eval_accuracy': 0.9968647865244975, 'eval_runtime': 26.4129, 'eval_samples_per_second': 162.799, 'eval_steps_per_second': 20.369, 'epoch': 4.0, 'step': 3736}, {'loss': 0.0012, 'grad_norm': 0.22050532698631287, 'learning_rate': 5.833333333333334e-06, 'epoch': 5.0, 'step': 4670}, {'eval_loss': 0.015889137983322144, 'eval_precision': 0.9554482018250134, 'eval_recall': 0.9363492898474487, 'eval_f1': 0.9458023379383634, 'eval_accuracy': 0.9967908428104527, 'eval_runtime': 26.443, 'eval_samples_per_second': 162.614, 'eval_steps_per_second': 20.346, 'epoch': 5.0, 'step': 4670}, {'loss': 0.0007, 'grad_norm': 0.0029625622555613518, 'learning_rate': 5e-06, 'epoch': 6.0, 'step': 5604}, {'eval_loss': 0.015546651557087898, 'eval_precision': 0.9523305084745762, 'eval_recall': 0.9458179905312993, 'eval_f1': 0.9490630773291105, 'eval_accuracy': 0.9969091527529245, 'eval_runtime': 26.3517, 'eval_samples_per_second': 163.177, 'eval_steps_per_second': 20.416, 'epoch': 6.0, 'step': 5604}, {'loss': 0.0004, 'grad_norm': 0.001171112759038806, 'learning_rate': 4.166666666666667e-06, 'epoch': 7.0, 'step': 6538}, {'eval_loss': 0.017168255522847176, 'eval_precision': 0.9482849604221636, 'eval_recall': 0.9452919516044187, 'eval_f1': 0.946786090621707, 'eval_accuracy': 0.9968647865244975, 'eval_runtime': 26.4131, 'eval_samples_per_second': 162.798, 'eval_steps_per_second': 20.369, 'epoch': 7.0, 'step': 6538}, {'loss': 0.0003, 'grad_norm': 0.013070103712379932, 'learning_rate': 3.3333333333333333e-06, 'epoch': 8.0, 'step': 7472}, {'eval_loss': 0.018616795539855957, 'eval_precision': 0.9407216494845361, 'eval_recall': 0.9600210415570752, 'eval_f1': 0.9502733663108566, 'eval_accuracy': 0.9969683077241603, 'eval_runtime': 26.3516, 'eval_samples_per_second': 163.178, 'eval_steps_per_second': 20.416, 'epoch': 8.0, 'step': 7472}, {'loss': 0.0002, 'grad_norm': 0.0003130324766971171, 'learning_rate': 2.5e-06, 'epoch': 9.0, 'step': 8406}, {'eval_loss': 0.01856151595711708, 'eval_precision': 0.9432882414151925, 'eval_recall': 0.9537085744345082, 'eval_f1': 0.9484697881245095, 'eval_accuracy': 0.9969683077241603, 'eval_runtime': 26.5063, 'eval_samples_per_second': 162.225, 'eval_steps_per_second': 20.297, 'epoch': 9.0, 'step': 8406}, {'loss': 0.0001, 'grad_norm': 0.0007476788596250117, 'learning_rate': 1.6666666666666667e-06, 'epoch': 10.0, 'step': 9340}, {'eval_loss': 0.019750073552131653, 'eval_precision': 0.9524564183835182, 'eval_recall': 0.9484481851657023, 'eval_f1': 0.9504480759093306, 'eval_accuracy': 0.9969978852097783, 'eval_runtime': 26.6919, 'eval_samples_per_second': 161.097, 'eval_steps_per_second': 20.156, 'epoch': 10.0, 'step': 9340}, {'loss': 0.0001, 'grad_norm': 0.00022554465977009386, 'learning_rate': 8.333333333333333e-07, 'epoch': 11.0, 'step': 10274}, {'eval_loss': 0.02116907201707363, 'eval_precision': 0.9410243145369891, 'eval_recall': 0.9568648079957917, 'eval_f1': 0.9488784559207093, 'eval_accuracy': 0.9969387302385424, 'eval_runtime': 26.4977, 'eval_samples_per_second': 162.278, 'eval_steps_per_second': 20.304, 'epoch': 11.0, 'step': 10274}, {'loss': 0.0, 'grad_norm': 4.652605639421381e-05, 'learning_rate': 0.0, 'epoch': 12.0, 'step': 11208}, {'eval_loss': 0.021516229957342148, 'eval_precision': 0.9428571428571428, 'eval_recall': 0.9547606522882693, 'eval_f1': 0.9487715629900679, 'eval_accuracy': 0.9969091527529245, 'eval_runtime': 26.3703, 'eval_samples_per_second': 163.062, 'eval_steps_per_second': 20.402, 'epoch': 12.0, 'step': 11208}, {'train_runtime': 7061.0858, 'train_samples_per_second': 50.763, 'train_steps_per_second': 1.587, 'total_flos': 3.4560342965935404e+16, 'train_loss': 0.0037687913884277813, 'epoch': 12.0, 'step': 11208}]
+
+Evaluation, NbAiLab/nb-bert-large
+***** predict metrics *****
+  predict_accuracy           =     0.9956
+  predict_f1                 =     0.9343
+  predict_loss               =     0.0142
+  predict_precision          =     0.9374
+  predict_recall             =     0.9313
+  predict_runtime            = 0:00:21.96
+  predict_samples_per_second =    157.088
+  predict_steps_per_second   =      19.67
+Train and save best epoch to /cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_01_101.json completed. F1: 0.934330299089727
+/cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_norbert3-large_06_101.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_norbert3-large_06_101.json
+03111215_ner2_norbert3-large_06_101.json seems to be completed. Exiting
+/cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_norbert3-large_09_101.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_norbert3-large_09_101.json
+03111215_ner2_norbert3-large Our label2id: {'O': 0, 'B-ORG': 1, 'I-ORG': 2, 'B-PER': 3, 'I-PER': 4}
+Running tokenizer on train dataset:   0%|          | 0/29870 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:   3%|▎         | 1000/29870 [00:00<00:15, 1902.29 examples/s]Running tokenizer on train dataset:   7%|▋         | 2000/29870 [00:00<00:11, 2326.18 examples/s]Running tokenizer on train dataset:  10%|█         | 3000/29870 [00:01<00:10, 2581.27 examples/s]Running tokenizer on train dataset:  13%|█▎        | 4000/29870 [00:01<00:09, 2712.38 examples/s]Running tokenizer on train dataset:  17%|█▋        | 5000/29870 [00:01<00:08, 2840.32 examples/s]Running tokenizer on train dataset:  20%|██        | 6000/29870 [00:02<00:07, 2991.13 examples/s]Running tokenizer on train dataset:  23%|██▎       | 7000/29870 [00:02<00:07, 3028.27 examples/s]Running tokenizer on train dataset:  27%|██▋       | 8000/29870 [00:02<00:06, 3147.47 examples/s]Running tokenizer on train dataset:  30%|███       | 9000/29870 [00:03<00:06, 3259.15 examples/s]Running tokenizer on train dataset:  33%|███▎      | 10000/29870 [00:03<00:06, 2870.90 examples/s]Running tokenizer on train dataset:  37%|███▋      | 11000/29870 [00:03<00:06, 3119.03 examples/s]Running tokenizer on train dataset:  40%|████      | 12000/29870 [00:04<00:05, 3190.71 examples/s]Running tokenizer on train dataset:  44%|████▎     | 13000/29870 [00:04<00:05, 3061.78 examples/s]Running tokenizer on train dataset:  47%|████▋     | 14000/29870 [00:04<00:05, 3094.30 examples/s]Running tokenizer on train dataset:  50%|█████     | 15000/29870 [00:05<00:04, 3029.57 examples/s]Running tokenizer on train dataset:  54%|█████▎    | 16000/29870 [00:05<00:04, 3083.62 examples/s]Running tokenizer on train dataset:  57%|█████▋    | 17000/29870 [00:05<00:04, 3052.93 examples/s]Running tokenizer on train dataset:  60%|██████    | 18000/29870 [00:06<00:04, 2941.31 examples/s]Running tokenizer on train dataset:  64%|██████▎   | 19000/29870 [00:06<00:03, 2896.33 examples/s]Running tokenizer on train dataset:  67%|██████▋   | 20000/29870 [00:06<00:03, 2925.43 examples/s]Running tokenizer on train dataset:  70%|███████   | 21000/29870 [00:07<00:03, 2946.48 examples/s]Running tokenizer on train dataset:  74%|███████▎  | 22000/29870 [00:07<00:02, 2958.46 examples/s]Running tokenizer on train dataset:  77%|███████▋  | 23000/29870 [00:07<00:02, 3078.46 examples/s]Running tokenizer on train dataset:  80%|████████  | 24000/29870 [00:08<00:01, 3090.69 examples/s]Running tokenizer on train dataset:  84%|████████▎ | 25000/29870 [00:08<00:01, 2630.00 examples/s]Running tokenizer on train dataset:  87%|████████▋ | 26000/29870 [00:08<00:01, 2651.96 examples/s]Running tokenizer on train dataset:  90%|█████████ | 27000/29870 [00:09<00:01, 2333.41 examples/s]Running tokenizer on train dataset:  94%|█████████▎| 28000/29870 [00:09<00:00, 2482.09 examples/s]Running tokenizer on train dataset:  97%|█████████▋| 29000/29870 [00:10<00:00, 2603.54 examples/s]Running tokenizer on train dataset: 100%|██████████| 29870/29870 [00:10<00:00, 2712.82 examples/s]Running tokenizer on train dataset: 100%|██████████| 29870/29870 [00:11<00:00, 2508.13 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/4300 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  23%|██▎       | 1000/4300 [00:00<00:00, 3333.07 examples/s]Running tokenizer on validation dataset:  47%|████▋     | 2000/4300 [00:00<00:00, 3227.00 examples/s]Running tokenizer on validation dataset:  70%|██████▉   | 3000/4300 [00:01<00:00, 2852.71 examples/s]Running tokenizer on validation dataset:  93%|█████████▎| 4000/4300 [00:01<00:00, 2854.07 examples/s]Running tokenizer on validation dataset: 100%|██████████| 4300/4300 [00:01<00:00, 2859.48 examples/s]Running tokenizer on validation dataset: 100%|██████████| 4300/4300 [00:01<00:00, 2909.20 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/3450 [00:00<?, ? examples/s]Running tokenizer on test dataset:  29%|██▉       | 1000/3450 [00:00<00:00, 2694.88 examples/s]Running tokenizer on test dataset:  58%|█████▊    | 2000/3450 [00:00<00:00, 2838.42 examples/s]Running tokenizer on test dataset:  87%|████████▋ | 3000/3450 [00:01<00:00, 2924.42 examples/s]Running tokenizer on test dataset: 100%|██████████| 3450/3450 [00:01<00:00, 2865.54 examples/s]Running tokenizer on test dataset: 100%|██████████| 3450/3450 [00:01<00:00, 2554.75 examples/s]
+03111215_ner2_norbert3-large Ready to train. Train dataset labels are now: ['idx', 'tokens', 'ner_labels', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+Traceback (most recent call last):
+  File "/cluster/work/users/egilron/seq-label_github/seq_label.py", line 289, in <module>
+    train_result = trainer.train(resume_from_checkpoint=False)
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 1624, in train
+    return inner_training_loop(
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 1961, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 2902, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/cluster/work/users/egilron/venvs/transformers/lib/python3.10/site-packages/transformers/trainer.py", line 2925, in compute_loss
+    outputs = model(**inputs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/.cache/modules/transformers_modules/ltg/norbert3-large/d06c1d3717209089f75a4cdddce881708ec680dc/modeling_norbert.py", line 493, in forward
+    sequence_output, contextualized_embeddings, attention_probs = self.get_contextualized_embeddings(input_ids, attention_mask)
+  File "/cluster/work/users/egilron/.cache/modules/transformers_modules/ltg/norbert3-large/d06c1d3717209089f75a4cdddce881708ec680dc/modeling_norbert.py", line 294, in get_contextualized_embeddings
+    contextualized_embeddings, attention_probs = self.transformer(static_embeddings, attention_mask, relative_embedding)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/.cache/modules/transformers_modules/ltg/norbert3-large/d06c1d3717209089f75a4cdddce881708ec680dc/modeling_norbert.py", line 41, in forward
+    hidden_state, attention_p = layer(hidden_states[-1], attention_mask, relative_embedding)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/.cache/modules/transformers_modules/ltg/norbert3-large/d06c1d3717209089f75a4cdddce881708ec680dc/modeling_norbert.py", line 77, in forward
+    x = x + self.mlp(x)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/work/users/egilron/.cache/modules/transformers_modules/ltg/norbert3-large/d06c1d3717209089f75a4cdddce881708ec680dc/modeling_norbert.py", line 101, in forward
+    return self.mlp(x)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/cluster/shared/nlpl/software/eb/packages/nlpl-pytorch/2.1.2-foss-2022b-cuda-12.0.0-Python-3.10.8/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 88.00 MiB. GPU 0 has a total capacty of 15.89 GiB of which 42.12 MiB is free. Including non-PyTorch memory, this process has 15.85 GiB memory in use. Of the allocated memory 13.34 GiB is allocated by PyTorch, and 1.83 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+
+GPU usage stats:
+Job 10917513 completed at Mon Mar 11 14:41:42 CET 2024

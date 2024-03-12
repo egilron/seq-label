@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=elsa-seq
+#SBATCH --job-name=ner2
 #SBATCH --mail-type=FAIL
 #SBATCH --account=nn9851k
 #SBATCH --partition=accel   
 #SBATCH --gres=gpu:1
-#SBATCH --time=9:00:00     
+#SBATCH --time=12:00:00     
 #SBATCH --mem-per-cpu=24G
 #SBATCH --nodes=1
 #SBATCH --output=slurmfiles/%j.out
@@ -29,7 +29,7 @@ FOLDER="/cluster/work/users/egilron/seq-label_github/configs/saga"
 
 # filter="03081014_elsa-intensity_NorBERT_3_base*.json"
 # filter="03081014_elsa-intensity_XLM-R_base*.json"
-filter="03081014_elsa-intensity_NB-BERT_base*.json"
+filter="03111215_ner2*.json"
 
 
 

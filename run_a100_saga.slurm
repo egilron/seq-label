@@ -4,7 +4,7 @@
 #SBATCH --account=nn9851k
 #SBATCH --partition=a100  
 #SBATCH --gres=gpu:1
-#SBATCH --time=14:00:00     
+#SBATCH --time=20:00:00     
 #SBATCH --mem-per-cpu=24G
 #SBATCH --nodes=1
 #SBATCH --output=slurmfiles/%j.out
@@ -29,7 +29,8 @@ source /cluster/work/users/egilron/venvs/transformers_a100/bin/activate
 FOLDER="/cluster/work/users/egilron/seq-label_github/configs/saga"
 
 
-filter="03091023_elsa-intensity_norbert3*.json"
+# filter="03111215_ner2_norbert3-large*.json"
+filter="03111215_ner2*.json"
 # filter="03091023_elsa-intensity_nb-bert*.json"
 
 

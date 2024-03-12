@@ -23,7 +23,7 @@ from transformers.utils.versions import require_version
 
 from src.local_parsers import ModelArguments, DataTrainingArguments
 # from src.evaluate_tsa import evaluateur
-from modeling_norbert import NorbertForTokenClassification
+# from modeling_norbert import NorbertForTokenClassification
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["WANDB_DISABLED"] = "true"
 print("Numpy:", np.version.version)
@@ -125,28 +125,37 @@ else:
 
 # %%
 # Instanciate the model
-if "norbert3" in model_args.model_name_or_path:
+# if "norbert3" in model_args.model_name_or_path:
 
-    model = NorbertForTokenClassification.from_pretrained(
-        model_args.model_name_or_path,
-        from_tf=bool(".ckpt" in model_args.model_name_or_path),
-        config=config,
-        cache_dir=model_args.cache_dir,
-        revision=model_args.model_revision,
-        use_auth_token=True if model_args.use_auth_token else None,
-        ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
-    )
+#     model = NorbertForTokenClassification.from_pretrained(
+#         model_args.model_name_or_path,
+#         from_tf=bool(".ckpt" in model_args.model_name_or_path),
+#         config=config,
+#         cache_dir=model_args.cache_dir,
+#         revision=model_args.model_revision,
+#         use_auth_token=True if model_args.use_auth_token else None,
+#         ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
+#     )
 
 
-else:
-        model = AutoModelForTokenClassification.from_pretrained(
-        model_args.model_name_or_path,
-        from_tf=bool(".ckpt" in model_args.model_name_or_path),
-        config=config,
-        cache_dir=model_args.cache_dir,
-        revision=model_args.model_revision,
-        ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
-    )
+# else:
+#         model = AutoModelForTokenClassification.from_pretrained(
+#         model_args.model_name_or_path,
+#         from_tf=bool(".ckpt" in model_args.model_name_or_path),
+#         config=config,
+#         cache_dir=model_args.cache_dir,
+#         revision=model_args.model_revision,
+#         ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
+#     )
+model = AutoModelForTokenClassification.from_pretrained(
+model_args.model_name_or_path,
+from_tf=bool(".ckpt" in model_args.model_name_or_path),
+config=config,
+cache_dir=model_args.cache_dir,
+revision=model_args.model_revision,
+ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
+trust_remote_code=model_args.trust_remote_code,
+)
 
 
 # %%

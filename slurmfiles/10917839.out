@@ -1,0 +1,70 @@
+Starting job 10917839 on gpu-12-8 on saga at Mon Mar 11 15:35:37 CET 2024
+
+/cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_01_101.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_01_101.json
+03111215_ner2_nb-bert-large_01_101.json seems to be completed. Exiting
+/cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_10_101.json
+/cluster/shared/nlpl/software/eb/packages/nlpl-python-candy/01-foss-2022b-Python-3.10.8/lib/python3.10/site-packages/pydot.py:17: UserWarning: `pydot` could not import `dot_parser`, so `pydot` will be unable to parse DOT files. The error was:  No module named 'pyparsing'
+  warnings.warn(
+Using the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).
+Some weights of BertForTokenClassification were not initialized from the model checkpoint at NbAiLab/nb-bert-large and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Numpy: 1.24.4
+PyTorch: 2.1.2
+Transformers: 4.38.2
+
+
+
+***Loading config file: /cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_10_101.json
+03111215_ner2_nb-bert-large Our label2id: {'O': 0, 'B-ORG': 1, 'I-ORG': 2, 'B-PER': 3, 'I-PER': 4}
+Running tokenizer on train dataset:   0%|          | 0/29870 [00:00<?, ? examples/s]Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+Running tokenizer on train dataset:   3%|▎         | 1000/29870 [00:00<00:07, 4012.66 examples/s]Running tokenizer on train dataset:   7%|▋         | 2000/29870 [00:00<00:05, 5001.01 examples/s]Running tokenizer on train dataset:  10%|█         | 3000/29870 [00:00<00:04, 5791.16 examples/s]Running tokenizer on train dataset:  13%|█▎        | 4000/29870 [00:00<00:04, 6180.47 examples/s]Running tokenizer on train dataset:  17%|█▋        | 5000/29870 [00:00<00:03, 6716.78 examples/s]Running tokenizer on train dataset:  20%|██        | 6000/29870 [00:00<00:03, 7237.13 examples/s]Running tokenizer on train dataset:  23%|██▎       | 7000/29870 [00:01<00:03, 7449.23 examples/s]Running tokenizer on train dataset:  27%|██▋       | 8000/29870 [00:01<00:03, 6457.54 examples/s]Running tokenizer on train dataset:  30%|███       | 9000/29870 [00:01<00:02, 7171.16 examples/s]Running tokenizer on train dataset:  33%|███▎      | 10000/29870 [00:01<00:02, 7628.56 examples/s]Running tokenizer on train dataset:  40%|████      | 12000/29870 [00:01<00:02, 8317.80 examples/s]Running tokenizer on train dataset:  44%|████▎     | 13000/29870 [00:01<00:02, 7882.61 examples/s]Running tokenizer on train dataset:  47%|████▋     | 14000/29870 [00:01<00:01, 7965.98 examples/s]Running tokenizer on train dataset:  50%|█████     | 15000/29870 [00:02<00:01, 7582.93 examples/s]Running tokenizer on train dataset:  54%|█████▎    | 16000/29870 [00:02<00:01, 7753.04 examples/s]Running tokenizer on train dataset:  57%|█████▋    | 17000/29870 [00:02<00:01, 7887.60 examples/s]Running tokenizer on train dataset:  60%|██████    | 18000/29870 [00:02<00:01, 7814.69 examples/s]Running tokenizer on train dataset:  64%|██████▎   | 19000/29870 [00:02<00:01, 7521.02 examples/s]Running tokenizer on train dataset:  67%|██████▋   | 20000/29870 [00:02<00:01, 7542.72 examples/s]Running tokenizer on train dataset:  70%|███████   | 21000/29870 [00:03<00:01, 6147.79 examples/s]Running tokenizer on train dataset:  74%|███████▎  | 22000/29870 [00:03<00:01, 6601.20 examples/s]Running tokenizer on train dataset:  77%|███████▋  | 23000/29870 [00:03<00:00, 7114.11 examples/s]Running tokenizer on train dataset:  80%|████████  | 24000/29870 [00:03<00:00, 7322.47 examples/s]Running tokenizer on train dataset:  84%|████████▎ | 25000/29870 [00:03<00:00, 7227.92 examples/s]Running tokenizer on train dataset:  87%|████████▋ | 26000/29870 [00:03<00:00, 7026.63 examples/s]Running tokenizer on train dataset:  90%|█████████ | 27000/29870 [00:03<00:00, 6389.03 examples/s]Running tokenizer on train dataset:  94%|█████████▎| 28000/29870 [00:03<00:00, 6656.75 examples/s]Running tokenizer on train dataset:  97%|█████████▋| 29000/29870 [00:04<00:00, 6889.31 examples/s]Running tokenizer on train dataset: 100%|██████████| 29870/29870 [00:04<00:00, 7100.26 examples/s]Running tokenizer on train dataset: 100%|██████████| 29870/29870 [00:04<00:00, 6688.74 examples/s]
+Running tokenizer on validation dataset:   0%|          | 0/4300 [00:00<?, ? examples/s]Running tokenizer on validation dataset:  23%|██▎       | 1000/4300 [00:00<00:00, 7879.76 examples/s]Running tokenizer on validation dataset:  47%|████▋     | 2000/4300 [00:00<00:00, 8016.61 examples/s]Running tokenizer on validation dataset:  70%|██████▉   | 3000/4300 [00:00<00:00, 5369.73 examples/s]Running tokenizer on validation dataset:  93%|█████████▎| 4000/4300 [00:00<00:00, 6051.00 examples/s]Running tokenizer on validation dataset: 100%|██████████| 4300/4300 [00:00<00:00, 5549.22 examples/s]
+Running tokenizer on test dataset:   0%|          | 0/3450 [00:00<?, ? examples/s]Running tokenizer on test dataset:  29%|██▉       | 1000/3450 [00:00<00:00, 7699.76 examples/s]Running tokenizer on test dataset:  58%|█████▊    | 2000/3450 [00:00<00:00, 4508.00 examples/s]Running tokenizer on test dataset:  87%|████████▋ | 3000/3450 [00:00<00:00, 5301.63 examples/s]Running tokenizer on test dataset: 100%|██████████| 3450/3450 [00:00<00:00, 4378.39 examples/s]
+03111215_ner2_nb-bert-large Ready to train. Train dataset labels are now: ['idx', 'tokens', 'ner_labels', 'input_ids', 'token_type_ids', 'attention_mask', 'labels']
+{'loss': 0.0239, 'grad_norm': 0.20035895705223083, 'learning_rate': 4.5833333333333334e-05, 'epoch': 1.0}
+{'eval_loss': 0.0096430080011487, 'eval_precision': 0.9616837560712358, 'eval_recall': 0.9374013677012099, 'eval_f1': 0.9493873201917955, 'eval_accuracy': 0.9970126739525873, 'eval_runtime': 12.2998, 'eval_samples_per_second': 349.6, 'eval_steps_per_second': 43.741, 'epoch': 1.0}
+Traceback (most recent call last):
+  File "/cluster/work/users/egilron/seq-label_github/seq_label.py", line 289, in <module>
+    train_result = trainer.train(resume_from_checkpoint=False)
+  File "/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/transformers/trainer.py", line 1624, in train
+    return inner_training_loop(
+  File "/cluster/work/users/egilron/venvs/transformers_a100/lib/python3.10/site-packages/transformers/trainer.py", line 1963, in _inner_training_loop
+    if (
+RuntimeError: CUDA error: unspecified launch failure
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+Job 10917839 consumed 1.8 billing hours from project nn9851k.
+
+Submitted 2024-03-11T15:35:35; waited 1.0 seconds in the queue after becoming eligible to run.
+
+Requested wallclock time: 14.0 hours
+Elapsed wallclock time:   13.3 minutes
+
+Task and CPU statistics:
+ID              CPUs  Tasks  CPU util                Start  Elapsed  Exit status
+10917839           1            0.0 %  2024-03-11T15:35:36  797.0 s  1
+10917839.batch     1      1    59.5 %  2024-03-11T15:35:36  797.0 s  1
+
+Used CPU time:   7.9 CPU minutes
+Unused CPU time: 5.4 CPU minutes
+
+Memory statistics, in GiB:
+ID               Alloc   Usage
+10917839          24.0        
+10917839.batch    24.0     2.1
+
+GPU usage stats:
+Job 10917839 completed at Mon Mar 11 15:48:53 CET 2024

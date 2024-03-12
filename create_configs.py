@@ -15,7 +15,8 @@ CONFIG_ROOT = "configs"
 
 label_col = {"tsa-bin": "tsa_tags",
     "tsa-intensity": "tsa_tags", 
-    "elsa-intensity": "elsa_labels"}
+    "elsa-intensity": "elsa_labels",
+    "ner2":"ner_labels" }
 
 # Settings dependent on where we are working
 # These must be set manually:
@@ -37,7 +38,8 @@ ms = {
     #   "tsa-intensity":"data/tsa_intensity" }
 ds = { # "tsa-bin": "ltg/norec_tsa,default",
      # "tsa-intensity":"ltg/norec_tsa,intensity",
-      "elsa-intensity": "data/elsa-dataset_seqlabel"
+     # "elsa-intensity": "data/elsa-dataset_seqlabel",
+     "ner2" : "data/ner_2cat"
       }
 LOCAL_DATASET = list(ds.values())[0].startswith("data/") # We want to ba able to force this here, and not depend on the character pattern if needed.
 
@@ -71,9 +73,9 @@ assert not any([e is None for e in [ms, ds, local_out_dir]]), "ms, ds, and local
 default = {
     "model_name_or_path": None, #ms["brent0"] ,
     "dataset_name": None,
-    "seed": None,
+    "seed": 101,
     "per_device_train_batch_size": 32,
-    "task_name": "tsa", # Change this in iteration if needed
+    "task_name": "ner", # Change this in iteration if needed
     "output_dir": local_out_dir,   # Add to this in iteration to avoid overwriting
     "overwrite_cache": True,
     "overwrite_output_dir": True,
@@ -98,10 +100,10 @@ default = {
 
 
 # Iterations: design this according to needs
-seeds = [101, 202, 303, 404, 505]
+seeds = [101]
 # seed = seeds[0]
 # for task in ds.keys(): #["tsa-bin"]: #
-task = "elsa-intensity"
+task = list(ds)[0]
 for seed in seeds:
     experiments = [] # List of dicts, one dict per experiments: Saves one separate json file each
     for i, ( b_size, l_rate) in enumerate(itertools.product( [32,64], [  1e-5, 5e-5])):
