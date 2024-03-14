@@ -16,6 +16,7 @@ CONFIG_ROOT = "configs"
 label_col = {"tsa-bin": "tsa_tags",
     "tsa-intensity": "tsa_tags", 
     "elsa-intensity": "elsa_labels",
+    "elsa-polarity": "elsa_labels",
     "ner2":"ner_labels" }
 
 # Settings dependent on where we are working
@@ -38,8 +39,8 @@ ms = {
     #   "tsa-intensity":"data/tsa_intensity" }
 ds = { # "tsa-bin": "ltg/norec_tsa,default",
      # "tsa-intensity":"ltg/norec_tsa,intensity",
-     # "elsa-intensity": "data/elsa-dataset_seqlabel",
-     "ner2" : "data/ner_2cat"
+     "elsa-polarity": "data/elsa-dataset_seqlabel",
+    #  "ner2" : "data/ner_2cat"
       }
 LOCAL_DATASET = list(ds.values())[0].startswith("data/") # We want to ba able to force this here, and not depend on the character pattern if needed.
 
@@ -100,7 +101,7 @@ default = {
 
 
 # Iterations: design this according to needs
-seeds = [101]
+seeds = [101, 202, 303]
 # seed = seeds[0]
 # for task in ds.keys(): #["tsa-bin"]: #
 task = list(ds)[0]

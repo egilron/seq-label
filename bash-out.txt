@@ -1,1 +1,1 @@
-/cluster/work/users/egilron/seq-label_github/configs/saga/03111215_ner2_nb-bert-large_04_101.json
+/cluster/work/users/egilron/seq-label_github/configs/saga/03121434_elsa-polarity_nb-bert_base_02_202.json

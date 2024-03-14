@@ -30,7 +30,7 @@ FOLDER="/cluster/work/users/egilron/seq-label_github/configs/saga"
 
 
 # filter="03111215_ner2_norbert3-large*.json"
-filter="03111215_ner2*.json"
+filter="03121434*.json"
 # filter="03091023_elsa-intensity_nb-bert*.json"
 
 
